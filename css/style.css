@@ -6,6 +6,49 @@
 }
 
 body {
-  background: #fff111;
+  background: #242424;
+}
+
+main {
+  height: 80%;
+  width: 80%;
+  background: #000;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .buttons {
+  background: #111111;
+  margin: auto;
+  padding: 50px;
+}
+
+main .buttons__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .buttons__btn {
+  height: 80px;
+  width: 80px;
+  background: #414141;
+  margin: 10px;
+  border-radius: 5%;
 }
 /*# sourceMappingURL=style.css.map */
