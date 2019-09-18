@@ -56,29 +56,77 @@ main .buttons__btn {
   transition: 100ms ease;
 }
 
-main .buttons .lit {
-  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-  background: #00ff62;
-}
-
 main .buttons__btn:hover {
   -webkit-box-shadow: 0px 4px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
           box-shadow: 0px 4px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(0.95) translateY(5px);
+          transform: scale(0.95) translateY(5px);
   cursor: pointer;
   -webkit-transition: 120ms ease;
   transition: 120ms ease;
 }
 
+main .buttons .lit:nth-child(8n+1) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #00ff62;
+}
+
+main .buttons .lit:nth-child(8n+2) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21fff4d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21fff4d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #00fff2;
+}
+
+main .buttons .lit:nth-child(8n+3) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #2189ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #2189ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #0077ff;
+}
+
+main .buttons .lit:nth-child(8n+4) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #c021ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #c021ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #a200ff;
+}
+
+main .buttons .lit:nth-child(8n+5) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff216bd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff216bd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #ff006a;
+}
+
+main .buttons .lit:nth-child(8n+6) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #ff0000;
+}
+
+main .buttons .lit:nth-child(8n+7) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ffd16dd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ffd16dd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #ff6600;
+}
+
+main .buttons .lit:nth-child(8n+8) {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #fffb00;
+}
+
 main .buttons__indicator {
   height: 10px;
   width: 80px;
-  background: #ff9925;
+  background: #8b500d;
   margin: 10px;
   border-radius: 5%;
-  -webkit-box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffa600d2, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-          box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffa600d2, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  -webkit-box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+}
+
+main .buttons .indi-lit {
+  background: #ff9925;
+  -webkit-box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffaa0de5, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffaa0de5, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
 }
 /*# sourceMappingURL=style.css.map */
