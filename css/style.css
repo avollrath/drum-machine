@@ -50,5 +50,35 @@ main .buttons__btn {
   background: #414141;
   margin: 10px;
   border-radius: 5%;
+  -webkit-box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  -webkit-transition: 100ms ease;
+  transition: 100ms ease;
+}
+
+main .buttons .lit {
+  -webkit-box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  background: #00ff62;
+}
+
+main .buttons__btn:hover {
+  -webkit-box-shadow: 0px 4px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 4px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  cursor: pointer;
+  -webkit-transition: 120ms ease;
+  transition: 120ms ease;
+}
+
+main .buttons__indicator {
+  height: 10px;
+  width: 80px;
+  background: #ff9925;
+  margin: 10px;
+  border-radius: 5%;
+  -webkit-box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffa600d2, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+          box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffa600d2, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
 }
 /*# sourceMappingURL=style.css.map */

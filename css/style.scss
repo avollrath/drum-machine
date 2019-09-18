@@ -43,6 +43,7 @@ width: 100%;
 justify-content: center;
 align-items: center;
 
+
 }
 
 &__btn {
@@ -52,6 +53,37 @@ width: 80px;
 background: #414141;
 margin:10px;
 border-radius: 5%;
+box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+transition: 100ms ease;
+
+}
+
+.lit {
+
+    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+    background: #00ff62;
+}
+
+&__btn:hover {
+
+    box-shadow: 0px 4px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+    transform: scale(0.95);
+   cursor: pointer;
+   transition: 120ms ease;
+
+}
+
+
+
+
+&__indicator {
+
+    height: 10px;
+    width: 80px;
+    background: #ff9925;
+    margin:10px;
+    border-radius: 5%;
+    box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffa600d2, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
 
 }
 
