@@ -56,14 +56,28 @@ allBtns.forEach(btn =>
 
 const start = () => {
 
+    let playing = 1;
+
+
     playBtn.classList.add("lit")
     pauseBtn.classList.remove("lit")
 
     pauseBtn.addEventListener("click", function(){
 
+        if (playing === 1) {
     playBtn.classList.remove("lit")
     pauseBtn.classList.add("lit")
         clearInterval(interval);
+        playing = 0;
+        }
+
+        else if (playin === 0) {
+
+            clearInterval(interval);
+            playing = 1;
+            start();
+
+        }
     });
 
 
@@ -127,6 +141,8 @@ const start = () => {
       
         step < 8 ? step++ : (step = 1);
       }, 300);
+
+
 
 }
 

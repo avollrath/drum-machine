@@ -193,6 +193,102 @@ main .right-panel .volume {
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
   margin: 40px 0 80px 0;
+  border-radius: 5px;
+}
+
+main .right-panel input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+main .right-panel input[type=range]:focus {
+  outline: none;
+}
+
+main .right-panel input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12.3px;
+  cursor: pointer;
+  -webkit-box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+          box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+  background: #2d2c2b;
+  border-radius: 0px;
+  border: 0px solid #262425;
+}
+
+main .right-panel input[type=range]::-webkit-slider-thumb {
+  -webkit-box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
+          box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
+  border: 3.1px solid #414243;
+  height: 50px;
+  width: 28px;
+  border-radius: 2px;
+  background: #171817;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -18.85px;
+}
+
+main .right-panel input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12.3px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+  background: #2d2c2b;
+  border-radius: 0px;
+  border: 0px solid #262425;
+}
+
+main .right-panel input[type=range]::-moz-range-thumb {
+  box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
+  border: 3.1px solid #414243;
+  height: 50px;
+  width: 28px;
+  border-radius: 2px;
+  background: #171817;
+  cursor: pointer;
+}
+
+main .right-panel input[type=range]::-ms-track {
+  width: 100%;
+  height: 12.3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+main .right-panel input[type=range]::-ms-fill-lower {
+  background: #060606;
+  border: 0px solid #262425;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+}
+
+main .right-panel input[type=range]::-ms-fill-upper {
+  background: #2d2c2b;
+  border: 0px solid #262425;
+  border-radius: 0px;
+  box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+}
+
+main .right-panel input[type=range]::-ms-thumb {
+  box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
+  border: 3.1px solid #414243;
+  height: 50px;
+  width: 28px;
+  border-radius: 2px;
+  background: #171817;
+  cursor: pointer;
+  height: 12.3px;
+}
+
+main .right-panel input[type=range]:focus::-ms-fill-lower {
+  background: #2d2c2b;
+}
+
+main .right-panel input[type=range]:focus::-ms-fill-upper {
+  background: #545250;
 }
 
 main .right-panel__btn {
