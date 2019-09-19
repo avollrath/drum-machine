@@ -1,5 +1,9 @@
 const allBtns = document.querySelectorAll(".buttons__btn");
 const allIndicators = document.querySelectorAll(".buttons__indicator");
+const playBtn = document.querySelector(".play");
+
+console.log(playBtn);
+
 
 
 let step = 1;
@@ -44,49 +48,63 @@ allBtns.forEach(btn =>
   })
 );
 
-setInterval(function() {
-  allBtns.forEach(btn => {
-    if (
-      btn.classList.contains("lit") &&
-      btn.dataset.row == 1 &&
-      btn.dataset.btn == step
-    ){
-      kick.play();
-      btn.style.filter = "brightness(1.3)";
-      setTimeout(function() {btn.style.filter = "none";}, 60);}
-    if (
-      btn.classList.contains("lit") &&
-      btn.dataset.row == 2 &&
-      btn.dataset.btn == step
-    ) {
-      snare.play();
-      btn.style.filter = "brightness(1.3)";
-      setTimeout(function() {btn.style.filter = "none";}, 60);}
-    if (
-      btn.classList.contains("lit") &&
-      btn.dataset.row == 3 &&
-      btn.dataset.btn == step
-    ){
-      tom.play();
-      btn.style.filter = "brightness(1.3)";
-      setTimeout(function() {btn.style.filter = "none";}, 60);}
-    if (
-      btn.classList.contains("lit") &&
-      btn.dataset.row == 4 &&
-      btn.dataset.btn == step
-    ) {
-      hihat.play();
-      btn.style.filter = "brightness(1.3)";
-      setTimeout(function() {btn.style.filter = "none";}, 60);}
-  });
 
-  allIndicators.forEach(indicator => {
-    indicator.classList.remove("indi-lit");
 
-    if (indicator.dataset.indicator == step) {
-      indicator.classList.toggle("indi-lit");
-    }
-  });
 
-  step < 8 ? step++ : (step = 1);
-}, 300);
+
+const start = () => {
+
+    setInterval(function() {
+        allBtns.forEach(btn => {
+      
+          btn.style.filter = "none";
+      
+          if (
+            btn.classList.contains("lit") &&
+            btn.dataset.row == 1 &&
+            btn.dataset.btn == step
+          ){
+            kick.play();
+            btn.style.filter = "brightness(1.3)";}
+          if (
+            btn.classList.contains("lit") &&
+            btn.dataset.row == 2 &&
+            btn.dataset.btn == step
+          ) {
+            snare.play();
+            btn.style.filter = "brightness(1.3)";
+            }
+          if (
+            btn.classList.contains("lit") &&
+            btn.dataset.row == 3 &&
+            btn.dataset.btn == step
+          ){
+            tom.play();
+            btn.style.filter = "brightness(1.3)";
+            }
+          if (
+            btn.classList.contains("lit") &&
+            btn.dataset.row == 4 &&
+            btn.dataset.btn == step
+          ) {
+            hihat.play();
+            btn.style.filter = "brightness(1.3)";
+           }
+        });
+      
+        allIndicators.forEach(indicator => {
+          indicator.classList.remove("indi-lit");
+      
+          if (indicator.dataset.indicator == step) {
+            indicator.classList.toggle("indi-lit");
+          }
+        });
+      
+        step < 8 ? step++ : (step = 1);
+      }, 300);
+
+}
+
+
+playBtn.addEventListener("click", start);
+
