@@ -6,6 +6,21 @@ const stopBtn = document.querySelector(".stop");
 
 
 
+const volumeControl = document.querySelector(".volume");
+
+const setVolume = function() { 
+    
+    
+    kick.channels.forEach(channel => channel.resource.volume = this.value / 10); 
+    snare.channels.forEach(channel => channel.resource.volume = this.value / 10); 
+    tom.channels.forEach(channel => channel.resource.volume = this.value / 10); 
+    hihat.channels.forEach(channel => channel.resource.volume = this.value / 10); 
+
+
+};
+
+volumeControl.addEventListener('change', setVolume);
+volumeControl.addEventListener('input', setVolume);
 
 
 let step = 1;
@@ -82,6 +97,10 @@ const start = () => {
 
 
     stopBtn.addEventListener("click", function(){
+
+        allBtns.forEach(btn => {
+      
+            btn.style.filter = "none";});
 
         playBtn.classList.remove("lit")
         pauseBtn.classList.remove("lit")

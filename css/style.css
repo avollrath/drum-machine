@@ -347,8 +347,8 @@ main .right-panel__btn:hover {
 }
 
 main .right-panel .lit {
-  -webkit-box-shadow: 0px 3px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
-          box-shadow: 0px 3px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+  -webkit-box-shadow: 0px 3px 0px #264258, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+          box-shadow: 0px 3px 0px #264258, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
   background: #1db7ff;
   border: 2px solid #35d7ff;
   -webkit-filter: brightness(1.3);
@@ -358,5 +358,83 @@ main .right-panel .lit {
 main .right-panel .lit:hover {
   -webkit-box-shadow: 0px 1px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
           box-shadow: 0px 1px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+}
+
+main .left-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #131313;
+  height: 450px;
+}
+
+main .left-panel__btn {
+  color: #919191;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background: #252525;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff49, inset 0px 1px 0px #585858cc;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff49, inset 0px 1px 0px #585858cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
+main .left-panel__btn .dots-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+main .left-panel__btn .dots-container .dot {
+  height: 5px;
+  width: 5px;
+  background: #035200;
+  margin: 2px;
+  border-radius: 100%;
+}
+
+main .left-panel__btn .dots-container .active {
+  -webkit-box-shadow: 0px 1px 0px #20aa33,0px 0px 5px 1px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
+          box-shadow: 0px 1px 0px #20aa33,0px 0px 5px 1px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
+  background: radial-gradient(ellipse at center, #72ffa8 0%, #00ff62 100%);
+}
+
+main .left-panel__btn:hover {
+  -webkit-box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+          box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+  -webkit-transform: scale(0.98) translateY(3px);
+          transform: scale(0.98) translateY(3px);
+  cursor: pointer;
+  -webkit-transition: 120ms ease;
+  transition: 120ms ease;
 }
 /*# sourceMappingURL=style.css.map */
