@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,800&display=swap');
+
+
 $primary: #ffffff;
 $secondary: #fff111;
 $background: #242424;
 
-$font: Helvetica, sans-serif;
+$font: 'Turret Road', cursive;
 
 * {
 
@@ -15,6 +18,17 @@ padding: 0;
 body {
 
 background: $background;
+
+}
+
+h1 {
+
+font-family: $font;
+color: rgb(124, 124, 124);
+text-transform: uppercase;
+font-weight: 800;
+font-size: 0.8rem;
+margin:0 0 0 10px;
 
 }
 

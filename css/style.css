@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Turret+Road:400,800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,6 +8,15 @@
 
 body {
   background: #242424;
+}
+
+h1 {
+  font-family: "Turret Road", cursive;
+  color: #7c7c7c;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8rem;
+  margin: 0 0 0 10px;
 }
 
 main {
