@@ -3,6 +3,18 @@ const allIndicators = document.querySelectorAll(".buttons__indicator");
 const playBtn = document.querySelector(".play");
 const pauseBtn = document.querySelector(".pause");
 const stopBtn = document.querySelector(".stop");
+const soundBtns = document.querySelectorAll(".left-panel__btn");
+
+soundBtns.forEach(btn => {
+
+    btn.addEventListener("click", function() {
+        
+        document.querySelector('.dot[data-dot="1"]').classList.toggle("active");
+
+    })
+
+
+})
 
 
 
@@ -64,6 +76,8 @@ allBtns.forEach(btn =>
     btn.classList.toggle("lit");
   })
 );
+
+
 
 
 

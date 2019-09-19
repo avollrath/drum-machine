@@ -20,10 +20,8 @@ h1 {
 }
 
 main {
-  height: 80%;
-  width: 80%;
   background: #000;
-  margin: auto;
+  margin: 100px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,7 +372,7 @@ main .left-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #131313;
+  background: #181818;
   height: 450px;
 }
 
@@ -386,8 +384,8 @@ main .left-panel__btn {
   background: #252525;
   text-align: center;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff49, inset 0px 1px 0px #585858cc;
-          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff49, inset 0px 1px 0px #585858cc;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
