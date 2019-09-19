@@ -1,8 +1,10 @@
 const allBtns = document.querySelectorAll(".buttons__btn");
 const allIndicators = document.querySelectorAll(".buttons__indicator");
 const playBtn = document.querySelector(".play");
+const pauseBtn = document.querySelector(".pause");
+const stopBtn = document.querySelector(".stop");
 
-console.log(playBtn);
+
 
 
 
@@ -54,7 +56,30 @@ allBtns.forEach(btn =>
 
 const start = () => {
 
-    setInterval(function() {
+    playBtn.classList.add("lit")
+    pauseBtn.classList.remove("lit")
+
+    pauseBtn.addEventListener("click", function(){
+
+    playBtn.classList.remove("lit")
+    pauseBtn.classList.add("lit")
+        clearInterval(interval);
+    });
+
+
+    stopBtn.addEventListener("click", function(){
+
+        playBtn.classList.remove("lit")
+        pauseBtn.classList.remove("lit")
+            clearInterval(interval);
+            allBtns.forEach(btn => btn.classList.remove("lit"));
+            allIndicators.forEach(indicator => {indicator.classList.remove("indi-lit")});
+            step = 1;
+        });
+
+    
+
+    const interval = setInterval(function() {
         allBtns.forEach(btn => {
       
           btn.style.filter = "none";
@@ -107,4 +132,6 @@ const start = () => {
 
 
 playBtn.addEventListener("click", start);
+
+
 

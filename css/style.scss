@@ -72,59 +72,116 @@ transition: 100ms ease;
 
 .lit:nth-child(8n+1) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #00ff62;
+    box-shadow: 0px 6px 0px #20aa33,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
+    background: radial-gradient(ellipse at center, #72ffa8 0%,#00ff62 100%);
 
 }
 
 .lit:nth-child(8n+2) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #21fff4d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #00fff2;
+    box-shadow: 0px 6px 0px #159ea3,0px 0px 10px 2px #21d3ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #88f1ff;
+    background: radial-gradient(ellipse at center, #85e3ff 0%, #00c3ff 100%);
 
 }
 
 .lit:nth-child(8n+3) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #2189ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #0077ff;
+    box-shadow: 0px 6px 0px #2a4ad6,0px 0px 10px 2px #2189ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #9ab3ff;
+    background: radial-gradient(ellipse at center, #65adff 0%, #0077ff 100%);
 
 }
 
 .lit:nth-child(8n+4) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #c021ffd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #a200ff;
+    box-shadow: 0px 6px 0px #8e2bc7,0px 0px 10px 2px #c021ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #be78ff;
+    background: radial-gradient(ellipse at center, #ca70ff 0%, #a200ff 100%);
 
 }
 
 .lit:nth-child(8n+5) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff216bd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #ff006a;
+    box-shadow: 0px 6px 0px #c4215f,0px 0px 10px 2px #ff216bd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ffa1f2;
+    background: radial-gradient(ellipse at center, #ff6aa8 0%, #ff006a 100%);
 
 }
 
 .lit:nth-child(8n+6) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #ff0000;
+    box-shadow: 0px 6px 0px #a81f1f,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
+    background: radial-gradient(ellipse at center, #ff5555 0%, #ff0000 100%);
 
 }
 
 .lit:nth-child(8n+7) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #ffd16dd2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #ff6600;
+    box-shadow: 0px 6px 0px #c05813,0px 0px 10px 2px #ffd16dd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ffc671;
+    background: radial-gradient(ellipse at center, #ffae43 0%, #ff6600 100%);
 
 }
 
 .lit:nth-child(8n+8) {
 
-    box-shadow: 0px 6px 0px #363636,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-    background: #fffb00;
+    box-shadow: 0px 6px 0px #b2b429,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #fffd70;
+    background: radial-gradient(ellipse at center, #fffc5b 0%, #fffb00 100%);
 
 }
+
+.lit:nth-child(8n+1):hover {
+
+    box-shadow: 0px 3px 0px #20aa33,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
+
+}
+
+.lit:nth-child(8n+2):hover {
+
+    box-shadow: 0px 3px 0px #159ea3,0px 0px 10px 2px #21d3ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #88f1ff;
+
+
+}
+
+.lit:nth-child(8n+3):hover {
+
+    box-shadow: 0px 3px 0px #2a4ad6,0px 0px 10px 2px #2189ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #9ab3ff;
+
+
+}
+
+.lit:nth-child(8n+4):hover {
+
+    box-shadow: 0px 3px 0px #8e2bc7,0px 0px 10px 2px #c021ffd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #be78ff;
+ 
+
+}
+
+.lit:nth-child(8n+5):hover{
+
+    box-shadow: 0px 3px 0px #c4215f,0px 0px 10px 2px #ff216bd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ffa1f2;
+ 
+
+}
+
+.lit:nth-child(8n+6):hover {
+
+    box-shadow: 0px 3px 0px #a81f1f,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
+
+
+}
+
+.lit:nth-child(8n+7):hover {
+
+    box-shadow: 0px 3px 0px #c05813,0px 0px 10px 2px #ffd16dd2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ffc671;
+
+
+}
+
+.lit:nth-child(8n+8):hover {
+
+    box-shadow: 0px 3px 0px #b2b429,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #fffd70;
+
+
+}
+
+
 
 
 
@@ -142,9 +199,10 @@ transition: 100ms ease;
 
 .indi-lit {
 
-  background: #ff9925;
+  background: radial-gradient(ellipse at center, #ffbd44 0%,#ffa600 100%);
 
-    box-shadow: 0px 3px 0px #814704, 0px 0px 10px 2px #ffaa0de5, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+    box-shadow: 0px 3px 0px #c5950f, 0px 0px 10px 2px #ffe70d, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ffe44d;
+    filter:brightness(1.5);
 
 }
 
@@ -156,11 +214,14 @@ transition: 100ms ease;
 
 .right-panel {
 
+
+    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #303030;
+    background: #111111;
     height: 450px;
 
 
@@ -180,7 +241,7 @@ transition: 100ms ease;
         background: #5f5f5f;
         text-align: center;
         border-radius: 100%;
-        box-shadow: 0px 2px 0px #202020, 0px 0px 5px 1px #01ffd563, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
+        box-shadow: 0px 3px 0px #202020, 0px 0px 5px 1px #01ffd563, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
 
 
 
@@ -188,7 +249,7 @@ transition: 100ms ease;
         .fas {
 
             line-height: 60px;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color:#000000c4;
   
 
@@ -199,11 +260,29 @@ transition: 100ms ease;
 
     &__btn:hover {
 
-        box-shadow: 0px 2px 0px #202020, 0px 0px 5px 1px #01ffd57c, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
+        box-shadow: 0px 1px 0px #202020, 0px 0px 5px 1px #01ffd57c, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
         transform: scale(0.98) translateY(3px);
        cursor: pointer;
        transition: 120ms ease;
 
+
+    }
+
+    .lit {
+
+        box-shadow: 0px 3px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+        background: #1db7ff;
+        border: 2px solid rgb(53, 215, 255);
+        filter: brightness(1.3);
+       
+
+    }
+
+    .lit:hover {
+
+        box-shadow: 0px 1px 0px #277fc7, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+
+       
 
     }
 
