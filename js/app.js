@@ -15,6 +15,7 @@ let kickSound = 1;
 let snareSound = 1;
 let tomSound = 1;
 let hihatSound = 1;
+let clapSound = 1;
 
 bpmBtn.addEventListener("click", function() {
   document
@@ -78,6 +79,17 @@ soundBtns.forEach(btn => {
         .classList.add("active");
       hihat = new Switcher(`../assets/sounds/hihat${hihatSound}.wav`, 16);
     }
+
+    if (this.classList.contains("clap")) {
+        document
+          .querySelector(`.dot[data-dot="clap${clapSound}"]`)
+          .classList.remove("active");
+        clapSound = clapSound == 3 ? (clapSound = 1) : clapSound + 1;
+        document
+          .querySelector(`.dot[data-dot="clap${clapSound}"]`)
+          .classList.add("active");
+      // hihat = new Switcher(`../assets/sounds/hihat${hihatSound}.wav`, 16);
+      }
   });
 });
 
