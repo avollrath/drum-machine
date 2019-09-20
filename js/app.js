@@ -23,10 +23,14 @@ bpmBtn.addEventListener("click", function() {
   speed = speed == 3 ? (speed = 1) : speed + 1;
   document.querySelector(`.bpm[data-bpm="${speed}"]`).classList.add("active");
 
+  if (playing == 1) {
   clearInterval(playFunction);
   if (speed == 1) interval(400);
   else if (speed == 2) interval(250);
-  else if (speed == 3) interval(150);
+  else if (speed == 3) interval(100);
+  }
+  else return;
+
 });
 
 soundBtns.forEach(btn => {
@@ -177,7 +181,7 @@ const interval = bpm => {
       }
     });
 
-    step < 8 ? step++ : (step = 1);
+    step < 16 ? step++ : (step = 1);
   }, bpm);
 };
 
@@ -203,7 +207,7 @@ const start = () => {
   clearInterval(playFunction);
   if (speed == 1) interval(400);
   else if (speed == 2) interval(250);
-  else if (speed == 3) interval(150);
+  else if (speed == 3) interval(100);
 
   stopBtn.addEventListener("click", function() {
     clearInterval(playFunction);

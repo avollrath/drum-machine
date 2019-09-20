@@ -25,7 +25,7 @@ h1 {
 
 header {
   margin: 100px auto 0px auto;
-  width: 1025px;
+  width: 1325px;
   height: 80px;
   background: #131313;
 }
@@ -42,6 +42,7 @@ header .top-panel {
 }
 
 header .top-panel__bpm-panel {
+  background: #161616;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +50,9 @@ header .top-panel__bpm-panel {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 30px 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 header .top-panel__bpm-panel .bpm-btn {
@@ -58,8 +62,8 @@ header .top-panel__bpm-panel .bpm-btn {
   background: #252525;
   text-align: center;
   border-radius: 2px;
-  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
-          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,15 +155,20 @@ main .buttons__row {
 }
 
 main .buttons__btn {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   background: #414141;
-  margin: 10px;
+  background: radial-gradient(ellipse at center, #3f3f3f 0%, #2c2c2c 100%);
+  margin: 10px 3px;
   border-radius: 5%;
-  -webkit-box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-          box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  -webkit-box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d,  0px 10px 6px 3px #000000b4;
+          box-shadow: 0px 6px 0px #363636, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d,  0px 10px 6px 3px #000000b4;
   -webkit-transition: 100ms ease;
   transition: 100ms ease;
+}
+
+main .buttons__btn:nth-child(4n) {
+  margin-right: 10px;
 }
 
 main .buttons__btn:hover {
@@ -262,12 +271,16 @@ main .buttons .lit:nth-child(8n+8):hover {
 
 main .buttons__indicator {
   height: 10px;
-  width: 80px;
-  background: #8b500d;
-  margin: 10px;
+  width: 60px;
+  background: radial-gradient(ellipse at center, #df9814 0%, #a76c00 100%);
+  margin: 3px;
   border-radius: 5%;
-  -webkit-box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
-          box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d;
+  -webkit-box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d,  0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #814704, inset 0px 0px 1px #ffffff80, inset 0px 1px 0px #ffdede2d,  0px 5px 5px 2px #000000b4;
+}
+
+main .buttons__indicator:nth-child(4n) {
+  margin-right: 10px;
 }
 
 main .buttons .indi-lit {
@@ -316,20 +329,18 @@ main .right-panel input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 12.3px;
   cursor: pointer;
-  -webkit-box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
-          box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
-  background: #2d2c2b;
-  border-radius: 0px;
-  border: 0px solid #262425;
+  -webkit-box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d, inset 2px 0px 3px 1px rgba(0, 0, 0, 0.733);
+          box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d, inset 2px 0px 3px 1px rgba(0, 0, 0, 0.733);
+  background: #141414;
 }
 
 main .right-panel input[type=range]::-webkit-slider-thumb {
-  -webkit-box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
-          box-shadow: 1.7px 1.7px 2.9px #171718, 0px 0px 1.7px #232325;
-  border: 3.1px solid #414243;
+  -webkit-box-shadow: -3px 0px 0px #202020, inset -1px 0px 1px #ffffff49, inset 1px 0px 5px #1b1b1bcc, -5px 0px 5px 2px #00000094;
+          box-shadow: -3px 0px 0px #202020, inset -1px 0px 1px #ffffff49, inset 1px 0px 5px #1b1b1bcc, -5px 0px 5px 2px #00000094;
+  border: 1px solid #2e2e2e;
   height: 50px;
-  width: 28px;
-  border-radius: 2px;
+  width: 20px;
+  border-radius: 1px;
   background: #171817;
   cursor: pointer;
   -webkit-appearance: none;
@@ -406,8 +417,8 @@ main .right-panel__btn {
   background: #5f5f5f;
   text-align: center;
   border-radius: 100%;
-  -webkit-box-shadow: 0px 3px 0px #202020, 0px 0px 5px 1px #01ffd563, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
-          box-shadow: 0px 3px 0px #202020, 0px 0px 5px 1px #01ffd563, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d, 0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #202020, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d, 0px 5px 5px 2px #000000b4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,8 +445,8 @@ main .right-panel__btn .fas {
 }
 
 main .right-panel__btn:hover {
-  -webkit-box-shadow: 0px 1px 0px #202020, 0px 0px 5px 1px #01ffd57c, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
-          box-shadow: 0px 1px 0px #202020, 0px 0px 5px 1px #01ffd57c, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
+  -webkit-box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
+          box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffffe1, inset 0px 1px 0px #5858582d;
   -webkit-transform: scale(0.98) translateY(3px);
           transform: scale(0.98) translateY(3px);
   cursor: pointer;
@@ -444,12 +455,12 @@ main .right-panel__btn:hover {
 }
 
 main .right-panel .lit {
-  -webkit-box-shadow: 0px 3px 0px #264258, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
-          box-shadow: 0px 3px 0px #264258, 0px 0px 5px 1px #01b7ff, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+  -webkit-box-shadow: 0px 3px 0px #183347, 0px 0px 5px 1px #01b7ff,0px 0px 3px 2px #a8e6ff57, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
+          box-shadow: 0px 3px 0px #183347, 0px 0px 5px 1px #01b7ff,0px 0px 3px 2px #a8e6ff57, inset 0px 0px 1px #ffffff, inset 0px 1px 0px #56d8ff;
   background: #1db7ff;
   border: 2px solid #35d7ff;
-  -webkit-filter: brightness(1.3);
-          filter: brightness(1.3);
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
 }
 
 main .right-panel .lit:hover {
@@ -477,14 +488,14 @@ main .left-panel {
 
 main .left-panel__btn {
   color: #919191;
-  width: 60px;
-  height: 60px;
-  margin: 10px;
+  width: 50px;
+  height: 40px;
+  margin: 16px;
   background: #252525;
   text-align: center;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
-          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,11 +515,15 @@ main .left-panel__btn {
   font-weight: 800;
 }
 
+main .left-panel__btn span {
+  padding-top: 4px;
+}
+
 main .left-panel__btn .dots-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px 0;
+  margin: 0px 0;
 }
 
 main .left-panel__btn .dots-container .dot {
@@ -520,9 +535,9 @@ main .left-panel__btn .dots-container .dot {
 }
 
 main .left-panel__btn .dots-container .active {
-  -webkit-box-shadow: 0px 1px 0px #20aa33,0px 0px 5px 1px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
-          box-shadow: 0px 1px 0px #20aa33,0px 0px 5px 1px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
-  background: radial-gradient(ellipse at center, #72ffa8 0%, #00ff62 100%);
+  -webkit-box-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+          box-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+  background: radial-gradient(ellipse at center, #79ff54 0%, #49FF18 100%);
 }
 
 main .left-panel__btn:hover {
