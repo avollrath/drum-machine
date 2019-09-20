@@ -5,15 +5,72 @@ const pauseBtn = document.querySelector(".pause");
 const stopBtn = document.querySelector(".stop");
 const soundBtns = document.querySelectorAll(".left-panel__btn");
 
+let bpm = ;
+let bpmInterval = (60 / bpm) * 1000 / 4;
+
+console.log(bpmInterval);
+
 let step = 1;
 let playing = 0;
 let playFunction;
 
+let kickSound = 1;
+let snareSound =  1;
+let tomSound = 1;
+let hihatSound = 1;
+
 soundBtns.forEach(btn => {
 
     btn.addEventListener("click", function() {
-        
-        document.querySelector('.dot[data-dot="1"]').classList.toggle("active");
+
+       
+
+
+      if (this.classList.contains("kick")) {
+
+
+        document.querySelector(`.dot[data-dot="kick${kickSound}"]`).classList.remove("active");
+        kickSound = kickSound == 3 ? kickSound = 1 : kickSound + 1;
+        document.querySelector(`.dot[data-dot="kick${kickSound}"]`).classList.add("active");
+        kick  = new Switcher(`../assets/sounds/kick${kickSound}.wav`, 16);
+    
+    }
+
+
+
+    if (this.classList.contains("snare")) {
+
+
+        document.querySelector(`.dot[data-dot="snare${snareSound}"]`).classList.remove("active");
+        snareSound = snareSound == 3 ? snareSound = 1 : snareSound + 1;
+        document.querySelector(`.dot[data-dot="snare${snareSound}"]`).classList.add("active");
+        snare  = new Switcher(`../assets/sounds/snare${snareSound}.wav`, 16);
+    
+    }
+
+
+
+    if (this.classList.contains("tom")) {
+
+
+        document.querySelector(`.dot[data-dot="tom${tomSound}"]`).classList.remove("active");
+        tomSound = tomSound == 3 ? tomSound = 1 : tomSound + 1;
+        document.querySelector(`.dot[data-dot="tom${tomSound}"]`).classList.add("active");
+        tom  = new Switcher(`../assets/sounds/tom${tomSound}.wav`, 16);
+    
+    }
+
+
+
+    if (this.classList.contains("hihat")) {
+
+
+        document.querySelector(`.dot[data-dot="hihat${hihatSound}"]`).classList.remove("active");
+        hihatSound = hihatSound == 3 ? hihatSound = 1 : hihatSound + 1;
+        document.querySelector(`.dot[data-dot="hihat${hihatSound}"]`).classList.add("active");
+        hihat  = new Switcher(`../assets/sounds/hihat${hihatSound}.wav`, 16);
+    
+    }
 
     })
 
@@ -41,10 +98,10 @@ volumeControl.addEventListener('input', setVolume);
 
 
 
-kick  = new Switcher('../assets/sounds/kick.wav', 8);
-snare  = new Switcher('../assets/sounds/snare.wav', 8);
-tom  = new Switcher('../assets/sounds/tom.wav', 8);
-hihat  = new Switcher('../assets/sounds/hihat.wav', 8);
+kick  = new Switcher('../assets/sounds/kick1.wav', 16);
+snare  = new Switcher('../assets/sounds/snare1.wav', 16);
+tom  = new Switcher('../assets/sounds/tom1.wav', 16);
+hihat  = new Switcher('../assets/sounds/hihat1.wav', 16);
 
 
 function Channel(audio_uri) {
@@ -128,7 +185,7 @@ const interval = () => {playFunction = setInterval(function() {
     });
   
     step < 8 ? step++ : (step = 1);
-  }, 300);
+  }, bpmInterval);
 }
 
 

@@ -4,6 +4,10 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -76,7 +80,7 @@ main .buttons__btn:hover {
 main .buttons .lit:nth-child(8n+1) {
   -webkit-box-shadow: 0px 6px 0px #20aa33,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
           box-shadow: 0px 6px 0px #20aa33,0px 0px 10px 2px #21ff85d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #b4ffaa;
-  background: radial-gradient(ellipse at center, #72ffa8 0%, #00ff62 100%);
+  background: radial-gradient(ellipse at center, #a7ffc9 0%, #00ff62 100%);
 }
 
 main .buttons .lit:nth-child(8n+2) {
@@ -104,8 +108,8 @@ main .buttons .lit:nth-child(8n+5) {
 }
 
 main .buttons .lit:nth-child(8n+6) {
-  -webkit-box-shadow: 0px 6px 0px #a81f1f,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
-          box-shadow: 0px 6px 0px #a81f1f,0px 0px 10px 2px #ff2121d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
+  -webkit-box-shadow: 0px 6px 0px #a81f1f,0px 0px 10px 2px #ff7676d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
+          box-shadow: 0px 6px 0px #a81f1f,0px 0px 10px 2px #ff7676d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #ff7676;
   background: radial-gradient(ellipse at center, #ff5555 0%, #ff0000 100%);
 }
 
@@ -118,7 +122,7 @@ main .buttons .lit:nth-child(8n+7) {
 main .buttons .lit:nth-child(8n+8) {
   -webkit-box-shadow: 0px 6px 0px #b2b429,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #fffd70;
           box-shadow: 0px 6px 0px #b2b429,0px 0px 10px 2px #fbff21d2,inset 0px 0px 1px #ffffff, inset 0px 1px 0px #fffd70;
-  background: radial-gradient(ellipse at center, #fffc5b 0%, #fffb00 100%);
+  background: radial-gradient(ellipse at center, #ffffb1 0%, #fffb00 100%);
 }
 
 main .buttons .lit:nth-child(8n+1):hover {
