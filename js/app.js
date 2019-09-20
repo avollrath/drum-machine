@@ -5,6 +5,10 @@ const pauseBtn = document.querySelector(".pause");
 const stopBtn = document.querySelector(".stop");
 const soundBtns = document.querySelectorAll(".left-panel__btn");
 
+let step = 1;
+let playing = 0;
+let playFunction;
+
 soundBtns.forEach(btn => {
 
     btn.addEventListener("click", function() {
@@ -35,7 +39,7 @@ volumeControl.addEventListener('change', setVolume);
 volumeControl.addEventListener('input', setVolume);
 
 
-let step = 1;
+
 
 kick  = new Switcher('../assets/sounds/kick.wav', 8);
 snare  = new Switcher('../assets/sounds/snare.wav', 8);
@@ -77,6 +81,56 @@ allBtns.forEach(btn =>
   })
 );
 
+const interval = () => {playFunction = setInterval(function() {
+    allBtns.forEach(btn => {
+  
+      btn.style.filter = "none";
+  
+      if (
+        btn.classList.contains("lit") &&
+        btn.dataset.row == 1 &&
+        btn.dataset.btn == step
+      ){
+        kick.play();
+        btn.style.filter = "brightness(1.3)";}
+      if (
+        btn.classList.contains("lit") &&
+        btn.dataset.row == 2 &&
+        btn.dataset.btn == step
+      ) {
+        snare.play();
+        btn.style.filter = "brightness(1.3)";
+        }
+      if (
+        btn.classList.contains("lit") &&
+        btn.dataset.row == 3 &&
+        btn.dataset.btn == step
+      ){
+        tom.play();
+        btn.style.filter = "brightness(1.3)";
+        }
+      if (
+        btn.classList.contains("lit") &&
+        btn.dataset.row == 4 &&
+        btn.dataset.btn == step
+      ) {
+        hihat.play();
+        btn.style.filter = "brightness(1.3)";
+       }
+    });
+  
+    allIndicators.forEach(indicator => {
+      indicator.classList.remove("indi-lit");
+  
+      if (indicator.dataset.indicator == step) {
+        indicator.classList.toggle("indi-lit");
+      }
+    });
+  
+    step < 8 ? step++ : (step = 1);
+  }, 300);
+}
+
 
 
 
@@ -85,7 +139,9 @@ allBtns.forEach(btn =>
 
 const start = () => {
 
-    let playing = 1;
+   
+playing = 1;
+  
 
 
     playBtn.classList.add("lit")
@@ -96,21 +152,27 @@ const start = () => {
         if (playing === 1) {
     playBtn.classList.remove("lit")
     pauseBtn.classList.add("lit")
-        clearInterval(interval);
+    clearInterval(playFunction);
         playing = 0;
         }
 
         else if (playin === 0) {
 
-            clearInterval(interval);
+            clearInterval(playFunction);
             playing = 1;
             start();
 
         }
     });
 
+    clearInterval(playFunction);
+    interval();
+
+
 
     stopBtn.addEventListener("click", function(){
+
+        clearInterval(playFunction);
 
         allBtns.forEach(btn => {
       
@@ -124,60 +186,15 @@ const start = () => {
             step = 1;
         });
 
-    
+      
 
-    const interval = setInterval(function() {
-        allBtns.forEach(btn => {
-      
-          btn.style.filter = "none";
-      
-          if (
-            btn.classList.contains("lit") &&
-            btn.dataset.row == 1 &&
-            btn.dataset.btn == step
-          ){
-            kick.play();
-            btn.style.filter = "brightness(1.3)";}
-          if (
-            btn.classList.contains("lit") &&
-            btn.dataset.row == 2 &&
-            btn.dataset.btn == step
-          ) {
-            snare.play();
-            btn.style.filter = "brightness(1.3)";
-            }
-          if (
-            btn.classList.contains("lit") &&
-            btn.dataset.row == 3 &&
-            btn.dataset.btn == step
-          ){
-            tom.play();
-            btn.style.filter = "brightness(1.3)";
-            }
-          if (
-            btn.classList.contains("lit") &&
-            btn.dataset.row == 4 &&
-            btn.dataset.btn == step
-          ) {
-            hihat.play();
-            btn.style.filter = "brightness(1.3)";
-           }
-        });
-      
-        allIndicators.forEach(indicator => {
-          indicator.classList.remove("indi-lit");
-      
-          if (indicator.dataset.indicator == step) {
-            indicator.classList.toggle("indi-lit");
-          }
-        });
-      
-        step < 8 ? step++ : (step = 1);
-      }, 300);
+   
 
 
 
 }
+
+
 
 
 playBtn.addEventListener("click", start);
