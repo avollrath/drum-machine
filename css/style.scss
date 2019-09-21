@@ -527,7 +527,7 @@ margin-right: 10px;
 
 color: rgb(145, 145, 145);
 width: 50px;
-height: 60px;
+height: 50px;
 margin: 10px;
 background: #252525;
 text-align: center;
@@ -541,6 +541,7 @@ font-family: $font;
 text-transform: uppercase;
 font-size: 0.5rem;
 font-weight: 800;
+
 
 span {
 
@@ -558,7 +559,7 @@ margin: 0px 0;
 height: 5px;
 width: 5px;
 background: #035200;
-margin: 2px;
+margin: 1.5px;
 border-radius: 100%;
 
 }
@@ -592,5 +593,101 @@ border-radius: 100%;
 
 }
 
+
+}
+
+
+footer {
+
+  margin: 0px auto 0px auto;
+  width: 1325px;
+  height: 80px;
+  background: rgb(19, 19, 19);
+
+  .bottom-panel {
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+    &__preset-panel {
+
+      background: #161616;
+      display: flex;
+      align-items: center;
+      margin: auto;
+      border: 1px solid rgba(0, 0, 0, 0.658);
+      border-radius: 10px;
+      padding: 10px 20px;
+
+      .preset-btn {
+
+        color: rgb(145, 145, 145);
+width: 40px;
+height: 20px;
+background: #252525;
+text-align: center;
+border-radius: 2px;
+box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: $font;
+text-transform: uppercase;
+font-size: 0.5rem;
+font-weight: 800;
+
+
+
+
+      }
+
+      .preset-btn:hover {
+
+        box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+        transform: scale(0.98) translateY(1px);
+       cursor: pointer;
+       transition: 120ms ease;
+    
+    
+    }
+
+      .preset-container {
+
+        display: flex;
+align-items: center;
+justify-content: center;
+margin: 10px;
+
+span {
+
+  margin: 10px;
+
+}
+
+.active {
+
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
+      }
+
+      .preset {
+        font-family: $font;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        font-weight: 800;
+        color: #035200;
+
+
+      
+      }
+
+    }
+    
+    }
 
 }

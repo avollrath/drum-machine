@@ -489,7 +489,7 @@ main .left-panel {
 main .left-panel__btn {
   color: #919191;
   width: 50px;
-  height: 60px;
+  height: 50px;
   margin: 10px;
   background: #252525;
   text-align: center;
@@ -530,7 +530,7 @@ main .left-panel__btn .dots-container .dot {
   height: 5px;
   width: 5px;
   background: #035200;
-  margin: 2px;
+  margin: 1.5px;
   border-radius: 100%;
 }
 
@@ -548,5 +548,105 @@ main .left-panel__btn:hover {
   cursor: pointer;
   -webkit-transition: 120ms ease;
   transition: 120ms ease;
+}
+
+footer {
+  margin: 0px auto 0px auto;
+  width: 1325px;
+  height: 80px;
+  background: #131313;
+}
+
+footer .bottom-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+footer .bottom-panel__preset-panel {
+  background: #161616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+footer .bottom-panel__preset-panel .preset-btn {
+  color: #919191;
+  width: 40px;
+  height: 20px;
+  background: #252525;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
+footer .bottom-panel__preset-panel .preset-btn:hover {
+  -webkit-box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+          box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+  -webkit-transform: scale(0.98) translateY(1px);
+          transform: scale(0.98) translateY(1px);
+  cursor: pointer;
+  -webkit-transition: 120ms ease;
+  transition: 120ms ease;
+}
+
+footer .bottom-panel__preset-panel .preset-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+footer .bottom-panel__preset-panel .preset-container span {
+  margin: 10px;
+}
+
+footer .bottom-panel__preset-panel .preset-container .active {
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
+footer .bottom-panel__preset-panel .preset {
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 800;
+  color: #035200;
 }
 /*# sourceMappingURL=style.css.map */

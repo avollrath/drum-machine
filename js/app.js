@@ -26,8 +26,8 @@ bpmBtn.addEventListener("click", function() {
 
   if (playing == 1) {
   clearInterval(playFunction);
-  if (speed == 1) interval(400);
-  else if (speed == 2) interval(250);
+  if (speed == 1) interval(200);
+  else if (speed == 2) interval(150);
   else if (speed == 3) interval(100);
   }
   else return;
@@ -231,8 +231,8 @@ const start = () => {
   });
 
   clearInterval(playFunction);
-  if (speed == 1) interval(400);
-  else if (speed == 2) interval(250);
+  if (speed == 1) interval(200);
+  else if (speed == 2) interval(150);
   else if (speed == 3) interval(100);
 
   stopBtn.addEventListener("click", function() {
