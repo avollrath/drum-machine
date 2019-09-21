@@ -15,7 +15,7 @@ let kickSound = 1;
 let snareSound = 1;
 let tomSound = 1;
 let hihatSound = 1;
-let clapSound = 1;
+let fxSound = 1;
 
 bpmBtn.addEventListener("click", function() {
   document
@@ -36,11 +36,12 @@ bpmBtn.addEventListener("click", function() {
 
 soundBtns.forEach(btn => {
   btn.addEventListener("click", function() {
+    
     if (this.classList.contains("kick")) {
       document
         .querySelector(`.dot[data-dot="kick${kickSound}"]`)
         .classList.remove("active");
-      kickSound = kickSound == 3 ? (kickSound = 1) : kickSound + 1;
+      kickSound = kickSound == 9 ? (kickSound = 1) : kickSound + 1;
       document
         .querySelector(`.dot[data-dot="kick${kickSound}"]`)
         .classList.add("active");
@@ -51,7 +52,7 @@ soundBtns.forEach(btn => {
       document
         .querySelector(`.dot[data-dot="snare${snareSound}"]`)
         .classList.remove("active");
-      snareSound = snareSound == 3 ? (snareSound = 1) : snareSound + 1;
+      snareSound = snareSound == 9 ? (snareSound = 1) : snareSound + 1;
       document
         .querySelector(`.dot[data-dot="snare${snareSound}"]`)
         .classList.add("active");
@@ -62,7 +63,7 @@ soundBtns.forEach(btn => {
       document
         .querySelector(`.dot[data-dot="tom${tomSound}"]`)
         .classList.remove("active");
-      tomSound = tomSound == 3 ? (tomSound = 1) : tomSound + 1;
+      tomSound = tomSound == 9 ? (tomSound = 1) : tomSound + 1;
       document
         .querySelector(`.dot[data-dot="tom${tomSound}"]`)
         .classList.add("active");
@@ -73,22 +74,22 @@ soundBtns.forEach(btn => {
       document
         .querySelector(`.dot[data-dot="hihat${hihatSound}"]`)
         .classList.remove("active");
-      hihatSound = hihatSound == 3 ? (hihatSound = 1) : hihatSound + 1;
+      hihatSound = hihatSound == 9 ? (hihatSound = 1) : hihatSound + 1;
       document
         .querySelector(`.dot[data-dot="hihat${hihatSound}"]`)
         .classList.add("active");
       hihat = new Switcher(`../assets/sounds/hihat${hihatSound}.wav`, 16);
     }
 
-    if (this.classList.contains("clap")) {
+    if (this.classList.contains("fx")) {
         document
-          .querySelector(`.dot[data-dot="clap${clapSound}"]`)
+          .querySelector(`.dot[data-dot="fx${fxSound}"]`)
           .classList.remove("active");
-        clapSound = clapSound == 3 ? (clapSound = 1) : clapSound + 1;
+        fxSound = fxSound == 9 ? (fxSound = 1) : fxSound + 1;
         document
-          .querySelector(`.dot[data-dot="clap${clapSound}"]`)
+          .querySelector(`.dot[data-dot="fx${fxSound}"]`)
           .classList.add("active");
-      // hihat = new Switcher(`../assets/sounds/hihat${hihatSound}.wav`, 16);
+       fx = new Switcher(`../assets/sounds/fx${fxSound}.wav`, 16);
       }
   });
 });
@@ -104,6 +105,9 @@ const setVolume = function() {
   hihat.channels.forEach(
     channel => (channel.resource.volume = this.value / 10)
   );
+  fx.channels.forEach(
+    channel => (channel.resource.volume = this.value / 10)
+  );
 };
 
 volumeControl.addEventListener("change", setVolume);
@@ -113,6 +117,7 @@ kick = new Switcher("../assets/sounds/kick1.wav", 16);
 snare = new Switcher("../assets/sounds/snare1.wav", 16);
 tom = new Switcher("../assets/sounds/tom1.wav", 16);
 hihat = new Switcher("../assets/sounds/hihat1.wav", 16);
+fx = new Switcher("../assets/sounds/fx1.wav", 16);
 
 function Channel(audio_uri) {
   this.audio_uri = audio_uri;
@@ -183,6 +188,15 @@ const interval = bpm => {
         hihat.play();
         btn.style.filter = "brightness(1.3)";
       }
+      if (
+        btn.classList.contains("lit") &&
+        btn.dataset.row == 5 &&
+        btn.dataset.btn == step
+      ) {
+        fx.play();
+        btn.style.filter = "brightness(1.3)";
+      }
+
     });
 
     allIndicators.forEach(indicator => {
