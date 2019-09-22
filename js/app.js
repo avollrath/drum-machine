@@ -17,6 +17,71 @@ let tomSound = 1;
 let hihatSound = 1;
 let fxSound = 1;
 
+
+
+const volumeControl = document.querySelector(".volume");
+
+const setVolume = function() {
+ 
+  kick.channels.forEach(channel => (channel.resource.volume = this.value / 10));
+  snare.channels.forEach(
+    channel => (channel.resource.volume = this.value / 10)
+  );
+  tom.channels.forEach(channel => (channel.resource.volume = this.value / 10));
+  hihat.channels.forEach(
+    channel => (channel.resource.volume = this.value / 10)
+  );
+  fx.channels.forEach(
+    channel => (channel.resource.volume = this.value / 10)
+  );
+};
+
+volumeControl.addEventListener("change", setVolume);
+volumeControl.addEventListener("input", setVolume);
+
+
+
+const channelVolumes = document.querySelectorAll(".channel-volume");
+
+const setChannelVolume = function(instrument, value) {
+
+    if (instrument == "kick") {
+        kick.channels.forEach(
+            channel => (channel.resource.volume = value / 10))}
+    
+
+    else if (instrument == "snare") {
+    snare.channels.forEach(
+      channel => (channel.resource.volume = value / 10)
+    )}
+
+    else if (instrument == "tom") {
+    tom.channels.forEach(channel => (channel.resource.volume = value / 10))}
+
+    else if (instrument == "hihat") {
+    hihat.channels.forEach(
+      channel => (channel.resource.volume = value / 10)
+    )}
+    else if (instrument == "fx") {
+    fx.channels.forEach(
+      channel => (channel.resource.volume = value / 10)
+    );
+  };
+
+};
+
+channelVolumes.forEach(slider => {
+
+
+    slider.addEventListener("change", function(){setChannelVolume(slider.dataset.channel, this.value) });
+ slider.addEventListener("input", function(){setChannelVolume(slider.dataset.channel, this.value) });
+
+})
+
+
+
+
+
 bpmBtn.addEventListener("click", function() {
   document
     .querySelector(`.bpm[data-bpm="${speed}"]`)
@@ -94,24 +159,7 @@ soundBtns.forEach(btn => {
   });
 });
 
-const volumeControl = document.querySelector(".volume");
 
-const setVolume = function() {
-  kick.channels.forEach(channel => (channel.resource.volume = this.value / 10));
-  snare.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
-  );
-  tom.channels.forEach(channel => (channel.resource.volume = this.value / 10));
-  hihat.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
-  );
-  fx.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
-  );
-};
-
-volumeControl.addEventListener("change", setVolume);
-volumeControl.addEventListener("input", setVolume);
 
 kick = new Switcher("../assets/sounds/kick1.wav", 16);
 snare = new Switcher("../assets/sounds/snare1.wav", 16);
