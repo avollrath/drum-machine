@@ -197,6 +197,31 @@ Switcher.prototype.play = function() {
 allBtns.forEach(btn =>
   btn.addEventListener("click", function() {
     btn.classList.toggle("lit");
+
+    if (btn.classList.contains("lit")){
+    switch (btn.dataset.row) {
+        case "1": 
+        kick.play()
+        break;
+        
+        case "2":
+        snare.play();
+        break;
+
+        case "3": 
+        tom.play();
+        break;
+
+        case "4":
+        hihat.play();
+        break;
+
+        case "5":
+        fx.play();
+        break;
+
+    }
+}
   })
 );
 
