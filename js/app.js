@@ -5,6 +5,7 @@ const pauseBtn = document.querySelector(".pause");
 const stopBtn = document.querySelector(".stop");
 const soundBtns = document.querySelectorAll(".left-panel__btn");
 const bpmBtn = document.querySelector(".bpm-btn");
+const presetBtn = document.querySelector(".preset-btn");
 
 let step = 1;
 let speed = 2;
@@ -302,3 +303,78 @@ const start = () => {
 };
 
 playBtn.addEventListener("click", start);
+
+
+const presetHouse = () => {
+
+    clearInterval(playFunction);
+    step = 1;
+    speed = 3;
+    playBtn.classList.add("lit");
+    pauseBtn.classList.remove("lit");
+
+allBtns.forEach(btn => btn.classList.remove("lit"));
+allIndicators.forEach(i => i.classList.remove("indi-lit"));
+document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+
+
+document.querySelectorAll(".bpm").forEach(bpm => bpm.classList.remove("active"));
+document.querySelector(`.bpm[data-bpm="3"]`).classList.add("active");
+
+document.querySelector(".preset[data-preset='house'").classList.add("active");
+
+
+//kick 
+
+kickSound = 6;
+document.querySelector(`.dot[data-dot="kick6"]`).classList.add("active");
+kick = new Switcher(`../assets/sounds/kick6.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="1"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="5"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="9"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="1"]').classList.add("lit");
+
+//snare
+
+snareSound = 1;
+document.querySelector(`.dot[data-dot="snare1"]`).classList.add("active");
+snare = new Switcher(`../assets/sounds/snare1.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="5"][data-row="2"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="2"]').classList.add("lit");
+
+//tom
+
+tomSound = 9;
+document.querySelector(`.dot[data-dot="tom9"]`).classList.add("active");
+tom = new Switcher(`../assets/sounds/tom9.wav`, 16);
+document.querySelector('.buttons__btn[data-btn="12"][data-row="3"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="15"][data-row="3"]').classList.add("lit");
+
+//hihat
+
+hihatSound = 5;
+document.querySelector(`.dot[data-dot="hihat5"]`).classList.add("active");
+hihat = new Switcher(`../assets/sounds/hihat5.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="3"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="7"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="11"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="15"][data-row="4"]').classList.add("lit");
+
+//fx
+fxSound = 4;
+document.querySelector(`.dot[data-dot="fx4"]`).classList.add("active");
+fx = new Switcher(`../assets/sounds/fx4.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="4"][data-row="5"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="7"][data-row="5"]').classList.add("lit");
+
+
+start();
+
+}
+
+
+presetBtn.addEventListener("click" , presetHouse);
