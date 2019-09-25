@@ -345,7 +345,7 @@ document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"))
 
 document.querySelectorAll(".bpm").forEach(bpm => bpm.classList.remove("active"));
 document.querySelector(`.bpm[data-bpm="3"]`).classList.add("active");
-
+document.querySelectorAll(".preset").forEach(preset => preset.classList.remove("active"));
 document.querySelector(".preset[data-preset='house'").classList.add("active");
 
 
@@ -402,4 +402,169 @@ start();
 }
 
 
-presetBtn.addEventListener("click" , presetHouse);
+const presetHiphop = () => {
+
+    clearInterval(playFunction);
+    step = 1;
+    speed = 2;
+    playBtn.classList.add("lit");
+    pauseBtn.classList.remove("lit");
+
+allBtns.forEach(btn => btn.classList.remove("lit"));
+allIndicators.forEach(i => i.classList.remove("indi-lit"));
+document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+
+
+document.querySelectorAll(".bpm").forEach(bpm => bpm.classList.remove("active"));
+document.querySelector(`.bpm[data-bpm="2"]`).classList.add("active");
+document.querySelectorAll(".preset").forEach(preset => preset.classList.remove("active"));
+document.querySelector(".preset[data-preset='hiphop'").classList.add("active");
+
+
+//kick 
+
+kickSound = 1;
+document.querySelector(`.dot[data-dot="kick1"]`).classList.add("active");
+kick = new Switcher(`../assets/sounds/kick1.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="1"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="3"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="11"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="12"][data-row="1"]').classList.add("lit");
+
+//snare
+
+snareSound = 5;
+document.querySelector(`.dot[data-dot="snare5"]`).classList.add("active");
+snare = new Switcher(`../assets/sounds/snare5.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="5"][data-row="2"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="2"]').classList.add("lit");
+
+//tom
+
+tomSound = 3;
+document.querySelector(`.dot[data-dot="tom3"]`).classList.add("active");
+tom = new Switcher(`../assets/sounds/tom3.wav`, 16);
+document.querySelector('.buttons__btn[data-btn="7"][data-row="3"]').classList.add("lit");
+
+
+//hihat
+
+hihatSound = 2;
+document.querySelector(`.dot[data-dot="hihat2"]`).classList.add("active");
+hihat = new Switcher(`../assets/sounds/hihat2.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="1"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="3"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="5"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="7"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="9"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="11"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="15"][data-row="4"]').classList.add("lit");
+
+//fx
+fxSound = 2;
+document.querySelector(`.dot[data-dot="fx2"]`).classList.add("active");
+fx = new Switcher(`../assets/sounds/fx2.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="9"][data-row="5"]').classList.add("lit");
+
+
+
+start();
+
+}
+
+
+const presetRock = () => {
+
+    clearInterval(playFunction);
+    step = 1;
+    speed = 2;
+    playBtn.classList.add("lit");
+    pauseBtn.classList.remove("lit");
+
+allBtns.forEach(btn => btn.classList.remove("lit"));
+allIndicators.forEach(i => i.classList.remove("indi-lit"));
+document.querySelectorAll(".dot").forEach(dot => dot.classList.remove("active"));
+
+
+document.querySelectorAll(".bpm").forEach(bpm => bpm.classList.remove("active"));
+document.querySelectorAll(".preset").forEach(preset => preset.classList.remove("active"));
+document.querySelector(`.bpm[data-bpm="2"]`).classList.add("active");
+
+document.querySelector(".preset[data-preset='rock'").classList.add("active");
+
+
+//kick 
+
+kickSound = 1;
+document.querySelector(`.dot[data-dot="kick1"]`).classList.add("active");
+kick = new Switcher(`../assets/sounds/kick1.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="1"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="9"][data-row="1"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="11"][data-row="1"]').classList.add("lit");
+
+//snare
+
+snareSound = 9;
+document.querySelector(`.dot[data-dot="snare9"]`).classList.add("active");
+snare = new Switcher(`../assets/sounds/snare9.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="5"][data-row="2"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="2"]').classList.add("lit");
+
+//tom
+
+tomSound = 5;
+document.querySelector(`.dot[data-dot="tom5"]`).classList.add("active");
+tom = new Switcher(`../assets/sounds/tom5.wav`, 16);
+document.querySelector('.buttons__btn[data-btn="13"][data-row="3"]').classList.add("lit");
+
+
+//hihat
+
+hihatSound = 9;
+document.querySelector(`.dot[data-dot="hihat9"]`).classList.add("active");
+hihat = new Switcher(`../assets/sounds/hihat9.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="1"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="3"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="5"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="7"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="9"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="11"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="13"][data-row="4"]').classList.add("lit");
+document.querySelector('.buttons__btn[data-btn="15"][data-row="4"]').classList.add("lit");
+
+//fx
+fxSound = 5;
+document.querySelector(`.dot[data-dot="fx5"]`).classList.add("active");
+fx = new Switcher(`../assets/sounds/fx5.wav`, 16);
+
+document.querySelector('.buttons__btn[data-btn="15"][data-row="5"]').classList.add("lit");
+
+
+
+start();
+
+}
+
+
+
+
+
+
+presetBtn.addEventListener("click" , function(){
+
+    if (document.querySelector(".preset[data-preset='rock'").classList.contains("active")) presetHouse()
+
+    else if (document.querySelector(".preset[data-preset='house'").classList.contains("active")) presetHiphop()
+
+    else presetRock()
+
+
+});
