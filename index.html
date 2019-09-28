@@ -16,15 +16,14 @@
 
                     <div class="top-panel">
                         <h1>Vollrath Drum Machine</h1>
-                        <div class="top-panel__bpm-panel">
-                        <div class="bpm-btn">Speed</div>
-                        <div class="bpm-container">
-                            <span data-bpm="1" class="bpm">slow</span>
-                            <span data-bpm="2" class="bpm active">medium</span>
-                            <span data-bpm="3" class="bpm">fast</span>
-                        </div>
-                        </div>
+                       
+                        <div class="input">
 
+                          <div class="audio-jack"></div>
+                          <div class="audio-jack"></div>
+                          <div class="audio-jack"></div>
+
+                        </div>
                         
                 
                     </div>
@@ -158,7 +157,16 @@
           <div data-btn="15" data-row="1" class="buttons__btn"></div>
           <div data-btn="16" data-row="1" class="buttons__btn"></div>
 
-          <input data-channel="kick" class="channel-volume" type="range" min="0" max="10" value="10" />
+          <input data-channel="kick" class="channel-volume" type="range" min="0" max="5" value="5" />
+
+          <div class="volume-numbers">
+           <span class="active">100</span>
+           <span>80</span>
+           <span>60</span>
+           <span>40</span>
+           <span>20</span>
+           <span>0</span>
+          </div>
         </div>
 
         <div class="buttons__row">
@@ -179,7 +187,15 @@
                 <div data-btn="15" data-row="2" class="buttons__btn"></div>
                 <div data-btn="16" data-row="2" class="buttons__btn"></div>
 
-                <input data-channel="snare" class="channel-volume" type="range" min="0" max="10" value="10" />
+                <input data-channel="snare" class="channel-volume" type="range" min="0" max="5" value="5" />
+                <div class="volume-numbers">
+                  <span class="active">100</span>
+                  <span>80</span>
+                  <span>60</span>
+                  <span>40</span>
+                  <span>20</span>
+                  <span>0</span>
+                 </div>
         </div>
 
         <div class="buttons__row">
@@ -200,7 +216,15 @@
                 <div data-btn="15" data-row="3" class="buttons__btn"></div>
                 <div data-btn="16" data-row="3" class="buttons__btn"></div>
 
-                <input data-channel="tom" class="channel-volume" type="range" min="0" max="10" value="10" />
+                <input data-channel="tom" class="channel-volume" type="range" min="0" max="5" value="5" />
+                <div class="volume-numbers">
+                  <span class="active">100</span>
+                  <span>80</span>
+                  <span>60</span>
+                  <span>40</span>
+                  <span>20</span>
+                  <span>0</span>
+                 </div>
         </div>
 
         <div class="buttons__row">
@@ -221,7 +245,15 @@
                 <div data-btn="15" data-row="4" class="buttons__btn"></div>
                 <div data-btn="16" data-row="4" class="buttons__btn"></div>
 
-                <input data-channel="hihat" class="channel-volume" type="range" min="0" max="10" value="10" />
+                <input data-channel="hihat" class="channel-volume" type="range" min="0" max="5" value="5" />
+                <div class="volume-numbers">
+                  <span class="active">100</span>
+                  <span>80</span>
+                  <span>60</span>
+                  <span>40</span>
+                  <span>20</span>
+                  <span>0</span>
+                 </div>
         </div>
 
         <div class="buttons__row">
@@ -242,7 +274,15 @@
                 <div data-btn="15" data-row="5" class="buttons__btn"></div>
                 <div data-btn="16" data-row="5" class="buttons__btn"></div>
 
-                <input data-channel="fx" class="channel-volume" type="range" min="0" max="10" value="10" />
+                <input data-channel="fx" class="channel-volume" type="range" min="0" max="5" value="5" />
+                <div class="volume-numbers">
+                  <span class="active">100</span>
+                  <span>80</span>
+                  <span>60</span>
+                  <span>40</span>
+                  <span>20</span>
+                  <span>0</span>
+                 </div>
 
         </div>
 
@@ -272,6 +312,7 @@
 
       <section class="right-panel">
         <input class="volume" type="range" min="0" max="10" value="10" />
+     
 
         <div class="right-panel__btn play"><i class="fas fa-play"></i>Play</div>
         <div class="right-panel__btn pause">
@@ -296,6 +337,24 @@
                         <span data-preset="hiphop" class="preset">Hiphop</span>
                     </div>
                     </div>
+
+                    <div class="bottom-panel__bpm-panel">
+                      <div class="bpm-btn">Speed</div>
+                      <div class="bpm-container">
+                          <span data-bpm="1" class="bpm">slow</span>
+                          <span data-bpm="2" class="bpm active">medium</span>
+                          <span data-bpm="3" class="bpm">fast</span>
+                      </div>
+                      </div>
+
+                      <div class="bottom-panel__bpm-panel">
+                        <div class="bpm-btn">Save</div>
+                        <div class="bpm-container">
+                            <span data-bpm="1" class="bpm">Slot 1</span>
+                            <span data-bpm="2" class="bpm active">Slot 2</span>
+                            <span data-bpm="3" class="bpm">Slot 3</span>
+                        </div>
+                        </div>
 
                     
             

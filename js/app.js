@@ -48,24 +48,24 @@ const setChannelVolume = function(instrument, value) {
 
     if (instrument == "kick") {
         kick.channels.forEach(
-            channel => (channel.resource.volume = value / 10))}
+            channel => (channel.resource.volume = value / 5))}
     
 
     else if (instrument == "snare") {
     snare.channels.forEach(
-      channel => (channel.resource.volume = value / 10)
+      channel => (channel.resource.volume = value / 5)
     )}
 
     else if (instrument == "tom") {
-    tom.channels.forEach(channel => (channel.resource.volume = value / 10))}
+    tom.channels.forEach(channel => (channel.resource.volume = value / 5))}
 
     else if (instrument == "hihat") {
     hihat.channels.forEach(
-      channel => (channel.resource.volume = value / 10)
+      channel => (channel.resource.volume = value / 5)
     )}
     else if (instrument == "fx") {
     fx.channels.forEach(
-      channel => (channel.resource.volume = value / 10)
+      channel => (channel.resource.volume = value / 5)
     );
   };
 

@@ -2,8 +2,9 @@
 
 
 $primary: #ffffff;
-$secondary: #fff111;
+$secondary: #131313;
 $background: #000000;
+
 
 $font: 'Turret Road', cursive;
 
@@ -19,6 +20,9 @@ user-select: none;
 body {
 
 background: $background;
+background-image: url("../assets/img/background.jpg");
+background-size: cover;
+background-position: center;
 
 }
 
@@ -29,16 +33,19 @@ color: rgb(124, 124, 124);
 text-transform: uppercase;
 font-weight: 800;
 font-size: 0.8rem;
-margin:0 0 0 20px;
+margin:0 0 0 50px;
 
 }
 
 header {
 
   margin: 100px auto 0px auto;
-  width: 1325px;
+  width: 1260px;
   height: 80px;
-  background: rgb(19, 19, 19);
+  background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65');
+  background-color: $secondary;
+  border-radius: 20px 20px 0 0 ;
+
 
   .top-panel {
 
@@ -46,78 +53,26 @@ header {
     align-items: center;
     height: 100%;
     width: 100%;
-    
-    &__bpm-panel {
 
-      background: #161616;
+    .input {
+
+      margin-left: auto;
+      margin-right: 50px;
       display: flex;
-      align-items: center;
-      margin: 0 30px 0 auto;
-      border: 1px solid rgba(0, 0, 0, 0.658);
-      border-radius: 10px;
-      padding: 10px 20px;
 
-      .bpm-btn {
+      .audio-jack {
 
-        color: rgb(145, 145, 145);
-width: 40px;
-height: 20px;
-background: #252525;
-text-align: center;
-border-radius: 2px;
-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-family: $font;
-text-transform: uppercase;
-font-size: 0.5rem;
-font-weight: 800;
-
-
-
-
-      }
-
-      .bpm-btn:hover {
-
-        box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
-        transform: scale(0.98) translateY(1px);
-       cursor: pointer;
-       transition: 120ms ease;
-    
-    
-    }
-
-      .bpm-container {
-
-        display: flex;
-        flex-direction: column;
-align-items: center;
-justify-content: center;
-margin: 10px;
-
-.active {
-
-  color: #49FF18;
-  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
-}
-
-      }
-
-      .bpm {
-        font-family: $font;
-        text-transform: uppercase;
-        font-size: 0.5rem;
-        font-weight: 800;
-        color: #035200;
-
-
-      
+        height: 10px;
+        width: 10px;
+        margin: 5px;
+        border-radius: 100%;
+        background: #000000;
+        box-shadow: 1px 1px 1px #817272, -1px -1px 1px #817272;
       }
 
     }
+    
+    
     
     }
 
@@ -126,21 +81,34 @@ margin: 10px;
 
 main {
 
-
-background: #000;
+background: $secondary;
 display: flex;
 justify-content: center;
 align-items: center;
+width: 1260px;
+margin: auto;
 
 
 
 
 .buttons {
 
-background: rgb(17, 17, 17);
+  background: $secondary;
 padding: 10px;
+width: 1000px;
+height: 380px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 1px solid rgb(32, 32, 32);
+padding: 20px;
+border-radius: 20px;
 
 
+.indicators {
+
+  width: 1000px;
+}
 
 
 
@@ -149,6 +117,27 @@ padding: 10px;
 display: flex;
 width: 100%;
 align-items: center;
+
+.volume-numbers {
+
+display: flex;
+flex-direction: column;
+font-family: $font;
+font-size: 0.5rem;
+color:  #035200;
+justify-content: space-between;
+height: 80%;
+transform: translateY(5px);
+
+
+}
+
+.active {
+
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
 
 
 
@@ -251,8 +240,8 @@ input[type=range] {
 
 &__btn {
 
-height: 60px;
-width: 60px;
+height: 46px;
+width: 46px;
 background: #414141;
 background: radial-gradient(ellipse at center, #3f3f3f 0%, #2c2c2c 100%);
 margin:10px 3px;
@@ -400,7 +389,7 @@ margin-right: 10px;
 &__indicator {
 
     height: 10px;
-    width: 60px;
+    width: 46px;
     background: radial-gradient(ellipse at center, #df9814 0%,#a76c00 100%);
     margin:3px;
     border-radius: 5%;
@@ -439,8 +428,10 @@ margin-right: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #111111;
-    height: 450px;
+    background: $secondary;
+    background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65');
+    height: 380px;
+    width: 130px;
 
 
     .volume {
@@ -539,8 +530,8 @@ margin-right: 10px;
     &__btn {
 
       color: rgb(145, 145, 145);
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       margin: 10px;
       background: #252525;
       text-align: center;
@@ -613,13 +604,14 @@ margin-right: 10px;
 
 
     
-
+  background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65');
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #181818;
-        height: 450px;
+        background: $secondary;
+        height: 380px;
+        width: 130px;
     
 
 &__btn {
@@ -700,28 +692,32 @@ border-radius: 100%;
 footer {
 
   margin: 0px auto 0px auto;
-  width: 1325px;
+  width: 1260px;
   height: 80px;
-  background: rgb(19, 19, 19);
+  background: $secondary;
+  box-shadow: 0px 20px 0px #0e0e0e;
+  border-radius: 0 0 20px 20px;
+  background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65');
 
   .bottom-panel {
 
     display: flex;
     align-items: center;
     height: 100%;
+    justify-content: center;
     width: 100%;
-    
-    &__preset-panel {
+
+    &__bpm-panel {
 
       background: #161616;
       display: flex;
       align-items: center;
-      margin: auto;
+      margin: 0 10px;
       border: 1px solid rgba(0, 0, 0, 0.658);
       border-radius: 10px;
       padding: 10px 20px;
 
-      .preset-btn {
+      .bpm-btn {
 
         color: rgb(145, 145, 145);
 width: 40px;
@@ -744,6 +740,79 @@ font-weight: 800;
 
       }
 
+      .bpm-btn:hover {
+
+        box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+        transform: scale(0.98) translateY(1px);
+       cursor: pointer;
+       transition: 120ms ease;
+    
+    
+    }
+
+      .bpm-container {
+
+        display: flex;
+        flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 10px;
+
+.active {
+
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
+      }
+
+      .bpm {
+        font-family: $font;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        font-weight: 800;
+        color: #035200;
+
+
+      
+      }
+
+    }
+    
+    &__preset-panel {
+
+      background: #161616;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(0, 0, 0, 0.658);
+      border-radius: 10px;
+      padding: 10px 20px;
+      
+
+      .preset-btn {
+
+        color: rgb(145, 145, 145);
+width: 40px;
+height: 20px;
+background: #252525;
+text-align: center;
+border-radius: 2px;
+box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: $font;
+text-transform: uppercase;
+font-size: 0.5rem;
+font-weight: 800;
+margin: 0 5px;
+
+
+
+
+      }
+
       .preset-btn:hover {
 
         box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
@@ -759,11 +828,12 @@ font-weight: 800;
         display: flex;
 align-items: center;
 justify-content: center;
-margin: 10px;
+margin: 5px;
+flex-direction: column;
 
 span {
 
-  margin: 10px;
+  margin: 1px;
 
 }
 

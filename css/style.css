@@ -12,6 +12,9 @@
 
 body {
   background: #000000;
+  background-image: url("../assets/img/background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -20,14 +23,16 @@ h1 {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 0.8rem;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 50px;
 }
 
 header {
   margin: 100px auto 0px auto;
-  width: 1325px;
+  width: 1260px;
   height: 80px;
-  background: #131313;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
+  background-color: #131313;
+  border-radius: 20px 20px 0 0;
 }
 
 header .top-panel {
@@ -41,90 +46,26 @@ header .top-panel {
   width: 100%;
 }
 
-header .top-panel__bpm-panel {
-  background: #161616;
+header .top-panel .input {
+  margin-left: auto;
+  margin-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 30px 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.658);
-  border-radius: 10px;
-  padding: 10px 20px;
 }
 
-header .top-panel__bpm-panel .bpm-btn {
-  color: #919191;
-  width: 40px;
-  height: 20px;
-  background: #252525;
-  text-align: center;
-  border-radius: 2px;
-  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
-          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Turret Road", cursive;
-  text-transform: uppercase;
-  font-size: 0.5rem;
-  font-weight: 800;
-}
-
-header .top-panel__bpm-panel .bpm-btn:hover {
-  -webkit-box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
-          box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
-  -webkit-transform: scale(0.98) translateY(1px);
-          transform: scale(0.98) translateY(1px);
-  cursor: pointer;
-  -webkit-transition: 120ms ease;
-  transition: 120ms ease;
-}
-
-header .top-panel__bpm-panel .bpm-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 10px;
-}
-
-header .top-panel__bpm-panel .bpm-container .active {
-  color: #49FF18;
-  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
-}
-
-header .top-panel__bpm-panel .bpm {
-  font-family: "Turret Road", cursive;
-  text-transform: uppercase;
-  font-size: 0.5rem;
-  font-weight: 800;
-  color: #035200;
+header .top-panel .input .audio-jack {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  border-radius: 100%;
+  background: #000000;
+  -webkit-box-shadow: 1px 1px 1px #817272, -1px -1px 1px #817272;
+          box-shadow: 1px 1px 1px #817272, -1px -1px 1px #817272;
 }
 
 main {
-  background: #000;
+  background: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,11 +75,32 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 1260px;
+  margin: auto;
 }
 
 main .buttons {
-  background: #111111;
+  background: #131313;
   padding: 10px;
+  width: 1000px;
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #202020;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+main .buttons .indicators {
+  width: 1000px;
 }
 
 main .buttons__row {
@@ -149,6 +111,30 @@ main .buttons__row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .buttons__row .volume-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Turret Road", cursive;
+  font-size: 0.5rem;
+  color: #035200;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80%;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+main .buttons__row .active {
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
 }
 
 main .buttons__row .channel-volume {
@@ -252,8 +238,8 @@ main .buttons__row input[type=range]:focus::-ms-fill-upper {
 }
 
 main .buttons__btn {
-  height: 60px;
-  width: 60px;
+  height: 46px;
+  width: 46px;
   background: #414141;
   background: radial-gradient(ellipse at center, #3f3f3f 0%, #2c2c2c 100%);
   margin: 10px 3px;
@@ -368,7 +354,7 @@ main .buttons .lit:nth-child(8n+8):hover {
 
 main .buttons__indicator {
   height: 10px;
-  width: 60px;
+  width: 46px;
   background: radial-gradient(ellipse at center, #df9814 0%, #a76c00 100%);
   margin: 3px;
   border-radius: 5%;
@@ -402,8 +388,10 @@ main .right-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #111111;
-  height: 450px;
+  background: #131313;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
+  height: 380px;
+  width: 130px;
 }
 
 main .right-panel .volume {
@@ -508,8 +496,8 @@ main .right-panel input[type=range]:focus::-ms-fill-upper {
 
 main .right-panel__btn {
   color: #919191;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
   background: #252525;
   text-align: center;
@@ -557,6 +545,7 @@ main .right-panel .lit .fas {
 }
 
 main .left-panel {
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,8 +559,9 @@ main .left-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #181818;
-  height: 450px;
+  background: #131313;
+  height: 380px;
+  width: 130px;
 }
 
 main .left-panel__btn {
@@ -640,9 +630,13 @@ main .left-panel__btn:hover {
 
 footer {
   margin: 0px auto 0px auto;
-  width: 1325px;
+  width: 1260px;
   height: 80px;
   background: #131313;
+  -webkit-box-shadow: 0px 20px 0px #0e0e0e;
+          box-shadow: 0px 20px 0px #0e0e0e;
+  border-radius: 0 0 20px 20px;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
 }
 
 footer .bottom-panel {
@@ -653,7 +647,92 @@ footer .bottom-panel {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+}
+
+footer .bottom-panel__bpm-panel {
+  background: #161616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+footer .bottom-panel__bpm-panel .bpm-btn {
+  color: #919191;
+  width: 40px;
+  height: 20px;
+  background: #252525;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+          box-shadow: 0px 3px 0px #202020, inset 0px 1px 1px #ffffff1f, inset 0px 1px 0px #585858cc,  0px 5px 5px 2px #000000b4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
+footer .bottom-panel__bpm-panel .bpm-btn:hover {
+  -webkit-box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+          box-shadow: 0px 1px 0px #202020, inset 0px 0px 1px #ffffff31, inset 0px 1px 0px #5858582d;
+  -webkit-transform: scale(0.98) translateY(1px);
+          transform: scale(0.98) translateY(1px);
+  cursor: pointer;
+  -webkit-transition: 120ms ease;
+  transition: 120ms ease;
+}
+
+footer .bottom-panel__bpm-panel .bpm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+footer .bottom-panel__bpm-panel .bpm-container .active {
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
+footer .bottom-panel__bpm-panel .bpm {
+  font-family: "Turret Road", cursive;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 800;
+  color: #035200;
 }
 
 footer .bottom-panel__preset-panel {
@@ -664,7 +743,6 @@ footer .bottom-panel__preset-panel {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
   border: 1px solid rgba(0, 0, 0, 0.658);
   border-radius: 10px;
   padding: 10px 20px;
@@ -696,6 +774,7 @@ footer .bottom-panel__preset-panel .preset-btn {
   text-transform: uppercase;
   font-size: 0.5rem;
   font-weight: 800;
+  margin: 0 5px;
 }
 
 footer .bottom-panel__preset-panel .preset-btn:hover {
@@ -718,11 +797,15 @@ footer .bottom-panel__preset-panel .preset-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px;
+  margin: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer .bottom-panel__preset-panel .preset-container span {
-  margin: 10px;
+  margin: 1px;
 }
 
 footer .bottom-panel__preset-panel .preset-container .active {
