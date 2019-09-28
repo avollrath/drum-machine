@@ -545,7 +545,6 @@ main .right-panel .lit .fas {
 }
 
 main .left-panel {
-  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,6 +559,7 @@ main .left-panel {
       -ms-flex-align: center;
           align-items: center;
   background: #131313;
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
   height: 380px;
   width: 130px;
 }
