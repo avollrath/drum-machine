@@ -7,6 +7,7 @@ const soundBtns = document.querySelectorAll(".left-panel__btn");
 const bpmBtn = document.querySelector(".bpm-btn");
 const presetBtn = document.querySelector(".preset-btn");
 
+
 let step = 1;
 let speed = 2;
 let playing = 0;
@@ -23,6 +24,8 @@ let fxSound = 1;
 const volumeControl = document.querySelector(".volume");
 
 const setVolume = function() {
+
+
  
   kick.channels.forEach(channel => (channel.resource.volume = this.value / 10));
   snare.channels.forEach(
@@ -46,24 +49,41 @@ const channelVolumes = document.querySelectorAll(".channel-volume");
 
 const setChannelVolume = function(instrument, value) {
 
+ 
+
     if (instrument == "kick") {
+      let kickScales = document.querySelectorAll(".volume-numbers.kick span");
+      kickScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-kickVolume="${value / 5 * 100}"]`).classList.add("active");
         kick.channels.forEach(
             channel => (channel.resource.volume = value / 5))}
     
 
     else if (instrument == "snare") {
+      let snareScales = document.querySelectorAll(".volume-numbers.snare span");
+      snareScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-snareVolume="${value / 5 * 100}"]`).classList.add("active");
     snare.channels.forEach(
       channel => (channel.resource.volume = value / 5)
     )}
 
     else if (instrument == "tom") {
+      let tomScales = document.querySelectorAll(".volume-numbers.tom span");
+      tomScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-tomVolume="${value / 5 * 100}"]`).classList.add("active");
     tom.channels.forEach(channel => (channel.resource.volume = value / 5))}
 
     else if (instrument == "hihat") {
+      let hihatScales = document.querySelectorAll(".volume-numbers.hihat span");
+      hihatScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-hihatVolume="${value / 5 * 100}"]`).classList.add("active");
     hihat.channels.forEach(
       channel => (channel.resource.volume = value / 5)
     )}
     else if (instrument == "fx") {
+      let fxScales = document.querySelectorAll(".volume-numbers.fx span");
+      fxScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-fxVolume="${value / 5 * 100}"]`).classList.add("active");
     fx.channels.forEach(
       channel => (channel.resource.volume = value / 5)
     );

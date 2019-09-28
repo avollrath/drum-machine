@@ -11,6 +11,9 @@
     <title>Vollrath Drum Machine</title>
   </head>
   <body>
+
+<div class="wrapper">
+
     <header>  
         
 
@@ -159,13 +162,13 @@
 
           <input data-channel="kick" class="channel-volume" type="range" min="0" max="5" value="5" />
 
-          <div class="volume-numbers">
-           <span class="active">100</span>
-           <span>80</span>
-           <span>60</span>
-           <span>40</span>
-           <span>20</span>
-           <span>0</span>
+          <div class="volume-numbers kick">
+           <span data-kickVolume="100" class="active">100</span>
+           <span data-kickVolume="80">80</span>
+           <span data-kickVolume="60">60</span>
+           <span data-kickVolume="40">40</span>
+           <span data-kickVolume="20">20</span>
+           <span data-kickVolume="0">0</span>
           </div>
         </div>
 
@@ -188,13 +191,13 @@
                 <div data-btn="16" data-row="2" class="buttons__btn"></div>
 
                 <input data-channel="snare" class="channel-volume" type="range" min="0" max="5" value="5" />
-                <div class="volume-numbers">
-                  <span class="active">100</span>
-                  <span>80</span>
-                  <span>60</span>
-                  <span>40</span>
-                  <span>20</span>
-                  <span>0</span>
+                <div class="volume-numbers snare">
+                    <span data-snareVolume="100" class="active">100</span>
+                    <span data-snareVolume="80">80</span>
+                    <span data-snareVolume="60">60</span>
+                    <span data-snareVolume="40">40</span>
+                    <span data-snareVolume="20">20</span>
+                    <span data-snareVolume="0">0</span>
                  </div>
         </div>
 
@@ -217,13 +220,13 @@
                 <div data-btn="16" data-row="3" class="buttons__btn"></div>
 
                 <input data-channel="tom" class="channel-volume" type="range" min="0" max="5" value="5" />
-                <div class="volume-numbers">
-                  <span class="active">100</span>
-                  <span>80</span>
-                  <span>60</span>
-                  <span>40</span>
-                  <span>20</span>
-                  <span>0</span>
+                <div class="volume-numbers tom">
+                    <span data-tomVolume="100" class="active">100</span>
+                    <span data-tomVolume="80">80</span>
+                    <span data-tomVolume="60">60</span>
+                    <span data-tomVolume="40">40</span>
+                    <span data-tomVolume="20">20</span>
+                    <span data-tomVolume="0">0</span>
                  </div>
         </div>
 
@@ -246,13 +249,13 @@
                 <div data-btn="16" data-row="4" class="buttons__btn"></div>
 
                 <input data-channel="hihat" class="channel-volume" type="range" min="0" max="5" value="5" />
-                <div class="volume-numbers">
-                  <span class="active">100</span>
-                  <span>80</span>
-                  <span>60</span>
-                  <span>40</span>
-                  <span>20</span>
-                  <span>0</span>
+                <div class="volume-numbers hihat">
+                    <span data-hihatVolume="100" class="active">100</span>
+                    <span data-hihatVolume="80">80</span>
+                    <span data-hihatVolume="60">60</span>
+                    <span data-hihatVolume="40">40</span>
+                    <span data-hihatVolume="20">20</span>
+                    <span data-hihatVolume="0">0</span>
                  </div>
         </div>
 
@@ -275,13 +278,13 @@
                 <div data-btn="16" data-row="5" class="buttons__btn"></div>
 
                 <input data-channel="fx" class="channel-volume" type="range" min="0" max="5" value="5" />
-                <div class="volume-numbers">
-                  <span class="active">100</span>
-                  <span>80</span>
-                  <span>60</span>
-                  <span>40</span>
-                  <span>20</span>
-                  <span>0</span>
+                <div class="volume-numbers fx">
+                    <span data-fxVolume="100" class="active">100</span>
+                    <span data-fxVolume="80">80</span>
+                    <span data-fxVolume="60">60</span>
+                    <span data-fxVolume="40">40</span>
+                    <span data-fxVolume="20">20</span>
+                    <span data-fxVolume="0">0</span>
                  </div>
 
         </div>
@@ -361,6 +364,7 @@
                 </div>
 
     </footer>
+  </div>
 
     <script src="./js/app.js"></script>
   </body>
