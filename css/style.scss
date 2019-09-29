@@ -3,7 +3,7 @@
 
 $primary: #ffffff;
 $secondary: #131313;
-$background: #000000;
+$background: linear-gradient(to right, #868f96 0%, #596164 100%);
 
 
 $font: 'Turret Road', cursive;
@@ -20,7 +20,7 @@ user-select: none;
 body {
 
 background: $background;
-background-image: url("../assets/img/background.jpg");
+// background-image: url("../assets/img/background.jpg");
 background-size: cover;
 background-position: center;
 

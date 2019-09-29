@@ -11,8 +11,8 @@
 }
 
 body {
-  background: #000000;
-  background-image: url("../assets/img/background.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(#868f96), to(#596164));
+  background: linear-gradient(to right, #868f96 0%, #596164 100%);
   background-size: cover;
   background-position: center;
 }

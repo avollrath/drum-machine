@@ -644,3 +644,18 @@ presetBtn.addEventListener("click" , function(){
 
 
 });
+
+
+const animation = () => {
+
+  TweenMax.staggerTo(".buttons__btn", 0.07, {css:{className:'+=lit'}}, 0.03);
+  TweenMax.staggerTo(".buttons__btn", 0.07, {css:{className:'-=lit'}, delay: 0.2}, 0.03);
+  TweenMax.set(".buttons__btn", {css:{className:'+=lit'}, delay: 2.6});
+  TweenMax.set(".buttons__btn", {css:{className:'-=lit'}, delay: 4});
+
+
+
+
+}
+
+animation();
