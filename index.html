@@ -314,8 +314,18 @@
       </section>
 
       <section class="right-panel">
-        <input class="volume" type="range" min="0" max="10" value="10" />
-     
+
+        <div class="volume-container">
+        <input class="volume" type="range" min="0" max="5" value="5" />
+        <div class="volume-master">
+            <span data-masterVolume="100" class="active">100</span>
+            <span data-masterVolume="80">80</span>
+            <span data-masterVolume="60">60</span>
+            <span data-masterVolume="40">40</span>
+            <span data-masterVolume="20">20</span>
+            <span data-masterVolume="0">0</span>
+         </div>
+        </div>
 
         <div class="right-panel__btn play"><i class="fas fa-play"></i>Play</div>
         <div class="right-panel__btn pause">
@@ -351,13 +361,18 @@
                       </div>
 
                       <div class="bottom-panel__bpm-panel">
-                        <div class="bpm-btn">Save</div>
-                        <div class="bpm-container">
-                            <span data-bpm="1" class="bpm">Slot 1</span>
-                            <span data-bpm="2" class="bpm active">Slot 2</span>
-                            <span data-bpm="3" class="bpm">Slot 3</span>
+                        <div class="bpm-btn save">Save</div>
+                        <div class="bpm-container save">
+                            <span data-bpm="1" class="bpm">Saved</span>
                         </div>
                         </div>
+
+                        <div class="bottom-panel__bpm-panel">
+                            <div class="bpm-btn load">Load</div>
+                            <div class="bpm-container load">
+                                <span data-bpm="1" class="bpm">Loaded</span>
+                            </div>
+                            </div>
 
                     
             

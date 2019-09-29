@@ -34,7 +34,7 @@ font-family: $font;
 color: rgb(124, 124, 124);
 text-transform: uppercase;
 font-weight: 800;
-font-size: 0.8rem;
+font-size: 1rem;
 margin:0 0 0 50px;
 
 }
@@ -436,6 +436,35 @@ margin-right: 10px;
     background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65');
     height: 380px;
     width: 130px;
+
+    .volume-container {
+
+      display: flex;
+
+      .volume-master {
+
+        display: flex;
+flex-direction: column;
+font-family: $font;
+font-size: 0.7rem;
+color:  #035200;
+justify-content: space-between;
+height: 80%;
+transform: translate(-20px, -5px)
+
+
+}
+
+.active {
+
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
+}
+
+
+      
+
+    }
 
 
     .volume {

@@ -1,12 +1,21 @@
-const allBtns = document.querySelectorAll(".buttons__btn");
-const allIndicators = document.querySelectorAll(".buttons__indicator");
+let allBtns = document.querySelectorAll(".buttons__btn");
+let allIndicators = document.querySelectorAll(".buttons__indicator");
 const playBtn = document.querySelector(".play");
 const pauseBtn = document.querySelector(".pause");
 const stopBtn = document.querySelector(".stop");
 const soundBtns = document.querySelectorAll(".left-panel__btn");
 const bpmBtn = document.querySelector(".bpm-btn");
 const presetBtn = document.querySelector(".preset-btn");
+const saveBtn = document.querySelector(".save");
+const loadBtn = document.querySelector(".load");
+const volumeControl = document.querySelector(".volume");
+let channelVolumes = document.querySelectorAll(".channel-volume");
 
+kick = new Switcher("../assets/sounds/kick1.wav", 16);
+snare = new Switcher("../assets/sounds/snare1.wav", 16);
+tom = new Switcher("../assets/sounds/tom1.wav", 16);
+hihat = new Switcher("../assets/sounds/hihat1.wav", 16);
+fx = new Switcher("../assets/sounds/fx1.wav", 16);
 
 let step = 1;
 let speed = 2;
@@ -19,24 +28,62 @@ let tomSound = 1;
 let hihatSound = 1;
 let fxSound = 1;
 
+let content ="";
 
 
-const volumeControl = document.querySelector(".volume");
+saveBtn.addEventListener("click", () => {
+
+content = document.querySelector(".buttons").innerHTML;
+
+localStorage.setItem("beat", content);
+
+document.querySelector(".bpm-container.save span").classList.add("active")
+setTimeout(() => { document.querySelector(".bpm-container.save span").classList.remove("active") }, 500);
+
+})
+
+
+loadBtn.addEventListener("click", () => {
+
+  if (localStorage.beat) {
+
+  document.querySelector(".buttons").innerHTML = localStorage.getItem("beat");
+  allBtns = document.querySelectorAll(".buttons__btn");
+  channelVolumes = document.querySelectorAll(".channel-volume");
+  allIndicators = document.querySelectorAll(".buttons__indicator");
+  document.querySelectorAll(".preset").forEach(preset => preset.classList.remove("active"));
+  init();
+  
+  document.querySelector(".bpm-container.load span").classList.add("active")
+  setTimeout(() => { document.querySelector(".bpm-container.load span").classList.remove("active") }, 500);
+
+  }
+  
+  })
+
+
+
+
+
 
 const setVolume = function() {
 
 
+  let volumeScales = document.querySelectorAll(".volume-master span");
+      volumeScales.forEach(volume => volume.classList.remove("active"))
+      document.querySelector(`span[data-masterVolume="${this.value / 5 * 100}"]`).classList.add("active");
+
  
-  kick.channels.forEach(channel => (channel.resource.volume = this.value / 10));
+  kick.channels.forEach(channel => (channel.resource.volume = this.value / 5));
   snare.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
+    channel => (channel.resource.volume = this.value / 5)
   );
-  tom.channels.forEach(channel => (channel.resource.volume = this.value / 10));
+  tom.channels.forEach(channel => (channel.resource.volume = this.value / 5));
   hihat.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
+    channel => (channel.resource.volume = this.value / 5)
   );
   fx.channels.forEach(
-    channel => (channel.resource.volume = this.value / 10)
+    channel => (channel.resource.volume = this.value / 5)
   );
 };
 
@@ -45,7 +92,7 @@ volumeControl.addEventListener("input", setVolume);
 
 
 
-const channelVolumes = document.querySelectorAll(".channel-volume");
+
 
 const setChannelVolume = function(instrument, value) {
 
@@ -91,13 +138,7 @@ const setChannelVolume = function(instrument, value) {
 
 };
 
-channelVolumes.forEach(slider => {
 
-
-    slider.addEventListener("change", function(){setChannelVolume(slider.dataset.channel, this.value) });
- slider.addEventListener("input", function(){setChannelVolume(slider.dataset.channel, this.value) });
-
-})
 
 
 
@@ -182,11 +223,7 @@ soundBtns.forEach(btn => {
 
 
 
-kick = new Switcher("../assets/sounds/kick1.wav", 16);
-snare = new Switcher("../assets/sounds/snare1.wav", 16);
-tom = new Switcher("../assets/sounds/tom1.wav", 16);
-hihat = new Switcher("../assets/sounds/hihat1.wav", 16);
-fx = new Switcher("../assets/sounds/fx1.wav", 16);
+
 
 function Channel(audio_uri) {
   this.audio_uri = audio_uri;
@@ -212,13 +249,24 @@ Switcher.prototype.play = function() {
   this.index = this.index < this.num ? this.index : 0;
 };
 
-// add light toggle to buttons
 
-allBtns.forEach(btn =>
+const init = () => {
+  
+  channelVolumes.forEach(slider => {
+
+
+    slider.addEventListener("change", function(){setChannelVolume(slider.dataset.channel, this.value) });
+ slider.addEventListener("input", function(){setChannelVolume(slider.dataset.channel, this.value) });
+
+})
+  
+  
+  
+  allBtns.forEach(btn =>
   btn.addEventListener("click", function() {
     btn.classList.toggle("lit");
 
-    if (btn.classList.contains("lit")){
+    if (btn.classList.contains("lit") && playing == 0){
     switch (btn.dataset.row) {
         case "1": 
         kick.play()
@@ -243,7 +291,10 @@ allBtns.forEach(btn =>
     }
 }
   })
-);
+)};
+
+init();
+
 
 const interval = bpm => {
   playFunction = setInterval(function() {
@@ -305,46 +356,51 @@ const interval = bpm => {
   }, bpm);
 };
 
+pauseBtn.addEventListener("click", function() {
+  if (playing === 1) {
+    playBtn.classList.remove("lit");
+    pauseBtn.classList.add("lit");
+    clearInterval(playFunction);
+    playing = 0;
+  } else if (playing === 0) {
+    clearInterval(playFunction);
+    start();
+  }
+});
+
+
+stopBtn.addEventListener("click", function() {
+  clearInterval(playFunction);
+
+  allBtns.forEach(btn => {
+    btn.style.filter = "none";
+  });
+
+  playBtn.classList.remove("lit");
+  pauseBtn.classList.remove("lit");
+  clearInterval(interval);
+  allBtns.forEach(btn => btn.classList.remove("lit"));
+  allIndicators.forEach(indicator => {
+    indicator.classList.remove("indi-lit");
+  });
+  step = 1;
+});
+
+
 const start = () => {
   playing = 1;
 
   playBtn.classList.add("lit");
   pauseBtn.classList.remove("lit");
 
-  pauseBtn.addEventListener("click", function() {
-    if (playing === 1) {
-      playBtn.classList.remove("lit");
-      pauseBtn.classList.add("lit");
-      clearInterval(playFunction);
-      playing = 0;
-    } else if (playin === 0) {
-      clearInterval(playFunction);
-      playing = 1;
-      start();
-    }
-  });
+
 
   clearInterval(playFunction);
   if (speed == 1) interval(200);
   else if (speed == 2) interval(150);
   else if (speed == 3) interval(100);
 
-  stopBtn.addEventListener("click", function() {
-    clearInterval(playFunction);
-
-    allBtns.forEach(btn => {
-      btn.style.filter = "none";
-    });
-
-    playBtn.classList.remove("lit");
-    pauseBtn.classList.remove("lit");
-    clearInterval(interval);
-    allBtns.forEach(btn => btn.classList.remove("lit"));
-    allIndicators.forEach(indicator => {
-      indicator.classList.remove("indi-lit");
-    });
-    step = 1;
-  });
+  
 };
 
 playBtn.addEventListener("click", start);

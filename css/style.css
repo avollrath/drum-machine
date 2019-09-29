@@ -22,7 +22,7 @@ h1 {
   color: #7c7c7c;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0 0 0 50px;
 }
 
@@ -392,6 +392,36 @@ main .right-panel {
   background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=121212ff&noise=292929&density=13&opacity=65");
   height: 380px;
   width: 130px;
+}
+
+main .right-panel .volume-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .right-panel .volume-container .volume-master {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Turret Road", cursive;
+  font-size: 0.7rem;
+  color: #035200;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80%;
+  -webkit-transform: translate(-20px, -5px);
+          transform: translate(-20px, -5px);
+}
+
+main .right-panel .volume-container .active {
+  color: #49FF18;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #49ff18;
 }
 
 main .right-panel .volume {
