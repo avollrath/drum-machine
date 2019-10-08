@@ -655,26 +655,32 @@ const animation = () => {
 
   tl.from(".wrapper", 1.3, {y: -1000, ease: Power2.easeIn} );
   tl.from(".headline", 0.1, {autoAlpha: 0, delay: 0.3});
-  tl.staggerFrom(".input div", 0.1, {scale: 0}, 0.2);
+
  
   tl.staggerFrom(".left-panel__btn", 0.06, {scale: 0}, 0.2);
   tl.staggerFrom(".channel-volume", 0.06, {scale: 0}, 0.2);
   tl.staggerFrom(".volume-numbers", 0.06, {autoAlpha: 0}, 0.1);
   tl.staggerFrom(".volume-numbers span", 0.02, {autoAlpha: 0}, 0.05);
+  tl.staggerFrom(".input div", 0.1, {scale: 0}, 0.2);
   tl.from(".volume", 0.06, {scale: 0});
-  tl.from(".bottom-panel__preset-panel", 0.06, {scale: 0});
-  tl.staggerFrom(".preset-container span", 0.1, {autoAlpha: 0}, 0.2);
-
-  tl.staggerFrom(".bottom-panel__bpm-panel", 0.06, {scale: 0});
-  tl.staggerFrom(".bpm-container span", 0.1, {autoAlpha: 0}, 0.2);
- 
+   
   tl.staggerFrom(".volume-master span", 0.06, {scale: 0}, 0.1);
   tl.staggerFrom(".right-panel__btn", 0.06, {scale: 0}, 0.2);
-  tl.staggerFrom(".buttons__indicator", 0.06, {scale: 0}, 0.05);
+  tl.from(".bottom-panel__preset-panel", 0.2, {scale: 0});
+  tl.staggerFrom(".preset-container span", 0.3, {autoAlpha: 0}, 0.3);
+
+
+
+
+  tl.staggerFrom(".bottom-panel__bpm-panel", 0.06, {scale: 0});
+  tl.staggerFrom(".bpm-container", 0.1, {autoAlpha: 0}, 0.2);
+ 
   tl.staggerFrom(".buttons__btn", 0.06, {scale: 0}, 0.02);
   tl.staggerTo(".buttons__btn", 0.06, {css:{className:'+=lit'}}, 0.02);
   tl.staggerTo(".buttons__btn", 0.07, {css:{className:'-=lit'}}, 0.01);
   tl.set(".buttons__btn", {css:{className:'+=lit'}});
+ 
+  tl.staggerFrom(".buttons__indicator", 0.06, {scale: 0}, 0.05);
   tl.set(".buttons__btn", {css:{className:'-=lit'}, delay: 0.7});
 
 
