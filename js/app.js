@@ -654,7 +654,8 @@ const animation = () => {
   const tl = new TimelineMax();
 
   tl.from(".wrapper", 1.3, {y: -1000, ease: Power2.easeIn} );
-  tl.from(".headline", 0.1, {autoAlpha: 0, delay: 0.3});
+  tl.from(".headline", 0.2, {autoAlpha: 0,  delay: 0.3});
+  tl.from(".headline", 0.5, {x: 950, ease: Power2.easeInOut});
 
  
   tl.staggerFrom(".left-panel__btn", 0.06, {scale: 0}, 0.2);
@@ -668,9 +669,6 @@ const animation = () => {
   tl.staggerFrom(".right-panel__btn", 0.06, {scale: 0}, 0.2);
   tl.from(".bottom-panel__preset-panel", 0.2, {scale: 0});
   tl.staggerFrom(".preset-container span", 0.3, {autoAlpha: 0}, 0.3);
-
-
-
 
   tl.staggerFrom(".bottom-panel__bpm-panel", 0.06, {scale: 0});
   tl.staggerFrom(".bpm-container", 0.1, {autoAlpha: 0}, 0.2);
