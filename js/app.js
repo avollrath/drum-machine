@@ -662,8 +662,8 @@ const animation = () => {
   tl.staggerFrom(".channel-volume", 0.06, {scale: 0}, 0.2);
   tl.staggerFrom(".volume-numbers", 0.06, {autoAlpha: 0}, 0.1);
   tl.staggerFrom(".volume-numbers span", 0.02, {autoAlpha: 0}, 0.05);
-  tl.staggerFrom(".input div", 0.1, {scale: 0}, 0.2);
-  tl.from(".volume", 0.06, {scale: 0});
+  tl.staggerFrom(".input div", 0.1, {scale: 0}, 0.3);
+  tl.from(".volume", 0.06, {scale: 0});   
    
   tl.staggerFrom(".volume-master span", 0.06, {scale: 0}, 0.1);
   tl.staggerFrom(".right-panel__btn", 0.06, {scale: 0}, 0.2);
