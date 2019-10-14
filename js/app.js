@@ -653,7 +653,7 @@ const animation = () => {
 
   const tl = new TimelineMax();
 
-  tl.from(".wrapper", 1.3, {y: -1000, ease: Power2.easeIn} );
+  tl.from(".wrapper", 1.4, {y: -1000, ease: Power2.easeIn} );
   tl.from(".headline", 0.2, {autoAlpha: 0,  delay: 0.3});
   tl.from(".headline", 0.5, {x: 950, ease: Power2.easeInOut});
 
